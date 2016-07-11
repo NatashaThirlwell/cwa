@@ -1,0 +1,45 @@
+/*background and font color*/
+	.footer{
+		background: #4A90E2;
+		width: 101vw;
+		height: 20vw;
+	    position: relative;
+	    right: 6vw;
+	    top: 30vw;
+	}
+
+	.white{
+		color: #fff;
+	}
+
+/*footer-nav*/
+	#footer .footer-nav a{
+		font-family: montserrat-regular;
+	}
+
+	#footer .footer-nav a:hover{
+		color: #fff;
+		background-color: #4A90E2;
+		cursor: pointer;
+		cursor: hand;
+	}
+		.footer-nav{
+			position: relative;
+			top: 1.5vw;
+			left: 7vw;
+		}
+
+/*contact info*/
+#footer .info{
+	position: relative;
+	top: 3vw;
+}
+	#footer .info .discription{
+		font-family: 'Montserrat Light', arial;
+	}
+
+/*copy-right*/
+.copy-right{
+	position: relative;
+	top: 6vw;
+}

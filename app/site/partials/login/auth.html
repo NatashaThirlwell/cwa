@@ -1,0 +1,119 @@
+<!-- AUTHENTICATION-->
+<section id="auth" ng-hide="ctrl.registered">
+	  <div class="centered login-modal">
+		    <div id="main-content" class="auth main-content" ng-submit="ctrl.authenticate()">
+		    <!-- Title -->
+			    <div class="title banner-wrapper registration-header">
+			        <h2>Login</h2>
+			    </div>
+			<!-- Input Fields -->
+			    <div class="container-fluid">
+			        <div class="login-wrapper">
+				        <div class="login-form clearfix">
+				            <form method="post" class="stacked-form">
+				            	<!-- Email input -->
+					            <div class="row">
+					                <div class="col-xs-12">
+					                	<label for="email" class="email">Email</label>
+						                <span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+						                <input id="email" class="green-input form-input bs-input-box stacked-input-box" type="text" name="EmailAddress" value="" placeholder="Email Address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.email" />
+					                </div>
+					            </div>
+					            <!-- Password input -->
+					            <div class="row">
+						            <div class="password-field col-xs-12">
+						            	<label for="password" class="password">Password</label>
+						                <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+						                <input id="password" class="green-input form-input bs-input-box stacked-input-box" type="password" name="Password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.password" />
+						            </div>
+					            </div>
+					            <!-- Btns -->
+					            <div class="auth-btns">
+					            	<!-- Login -->
+					            	<div class="login">
+						            	<input type="submit" value="{{ctrl.auth_btn}}" class="login-btn btn form-input bs-form__button" ng-hide=""/>
+						            </div>
+						            <!-- Register -->
+						            <div class="register">
+						            	<input type="submit" value="{{ctrl.register_btn}}" class="new-btn btn form-input bs-form__button" ng-click="ctrl.showReg()"/>
+						            </div>
+						        </div>
+				            </form>
+				        <!-- Forgot Password -->
+							<a ng-click=""class="forgot-password">Forgot your password?</a>
+				        </div>
+			    	</div>
+			    </div>
+		    </div>
+	  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="auth" ng-show="ctrl.registered">
+    <div class="centered register-modal">
+        <div id="main-content" class="auth main-content" ng-submit="ctrl.register()">
+        <!-- Title -->
+            <div class="title banner-wrapper registration-header">
+                <h3>Register</h3>
+            </div>
+        <!-- Input Fields -->
+            <div class="container-fluid">
+                <div class="login-wrapper">
+                    <div class="login-form clearfix">
+                        <form method="post" class="stacked-form">
+                        	<!-- First Name input -->
+                            <div class="first-name row">
+                                <div class="col-xs-6">
+                                    <label for="first_name" class="label_first-name">First Name</label>
+                                  <span class="field-validation-valid" data-valmsg-for="first_name" data-valmsg-replace="true"></span>
+                                  <input id="first_name" class="name green-input form-input bs-input-box stacked-input-box" type="first_name" name="first_name" value="" placeholder="First Name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.first_name" />
+                                </div>
+                            </div>
+                            <!-- Last Name input -->
+                            <div class="last-name row">
+                                <div class="col-xs-6">
+                                    <label for="last_name" class="label_last-name">Last Name</label>
+                                  <span class="field-validation-valid" data-valmsg-for="last_name" data-valmsg-replace="true"></span>
+                                  <input id="last_name" class="name green-input form-input bs-input-box stacked-input-box" type="last_name" name="last_name" value="" placeholder="Last Name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.last_name" />
+                                </div>
+                            </div>
+                            <!-- Email input -->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="email" class="email">Email</label>
+                                  <span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+                                  <input id="email" class="green-input form-input bs-input-box stacked-input-box" type="email" name="EmailAddress" value="" placeholder="Email Address" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.email" />
+                                </div>
+                            </div>
+                            <!-- Password input-1 -->
+                            <div class="row">
+                                <div class="password-field col-xs-12">
+                                    <label for="password" class="password">Password</label>
+                                    <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                    <input id="password" class="green-input form-input bs-input-box stacked-input-box" type="password" name="Password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.password" />
+                                </div>
+                                <!-- Password input-2 -->
+                                <div class="re-password-field col-xs-12">
+                                    <label for="password" class="password">Confirm Password</label>
+                                    <span class="field-validation-valid" data-valmsg-for="Re-type Password" data-valmsg-replace="true"></span>
+                                    <input id="re-password" class="green-input form-input bs-input-box stacked-input-box" type="password" name="Password" placeholder="Confirm Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.repassword" />
+                                </div>
+                            </div>
+                            <!-- Btn -->
+                            <div class="auth-btns">
+                            	<div class="login">
+                            	    <input type="submit" value="{{ctrl.register_btn}}" class="reg-btn  form-input btn bs-form__button stacked-input-box"/>
+                            	</div>
+                                <!-- back to login -->
+					            <div class="log-register">
+					            	<input type="submit" value="Return to Login" class="new-btn btn form-input bs-form__button" ng-click="ctrl.showLog()"/>
+					            </div>
+				            	
+                        	</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

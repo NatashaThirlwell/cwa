@@ -1,0 +1,69 @@
+/*move*/
+.connected{
+	position: relative;
+	top:21.5vw;
+}
+
+/*center*/
+	.centered{
+		text-align: center;
+	}
+
+	.position{
+		position: relative;
+		right: 1.7vw;
+	}
+
+/*Green-input (.green-input = found in auth.css)*/
+.green-form{
+	position: relative;
+	bottom: 6.5vw;
+    right: 29vw;
+}
+	.green-submit{
+		position: relative;
+		right: 3vw;
+	}
+
+	.connect_input-position{
+		position: relative;
+		top: 7.74vw;
+		left: 30vw;
+		width: 35vw;
+	}
+
+/*Social*/
+.social {
+	position: relative;
+	top: 1vw;
+}
+	.social img:hover{
+				opacity: 1;
+		-webkit-animation: flash 1.5s;
+		animation: flash 1.5s;
+	}
+	@-webkit-keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+
+
+
+
+
+
+
+

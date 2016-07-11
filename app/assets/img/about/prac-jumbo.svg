@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="187px" height="187px" viewBox="0 0 187 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Technicians</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M93.5,187 C145.138624,187 187,145.138624 187,93.5 C187,41.8613759 145.138624,0 93.5,0 C41.8613759,0 0,41.8613759 0,93.5 C0,145.138624 41.8613759,187 93.5,187 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="239" height="200"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="239" height="200" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABOUT-Page---TECHNICIANS" transform="translate(-407.000000, -104.000000)">
+            <g id="Navbar" transform="translate(0.000000, -1.000000)">
+                <g id="Tabs" transform="translate(421.000000, 14.391304)">
+                    <g id="Group-2" transform="translate(0.000000, 4.778696)"></g>
+                </g>
+            </g>
+            <g id="Technicians" transform="translate(407.000000, 104.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="Techinicians" mask="url(#mask-2)">
+                    <g transform="translate(-27.000000, -7.000000)">
+                        <use id="Rectangle-177" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="#2EC0F9" xlink:href="#path-3"></use>
+                        <g id="Technicians-patien" stroke="none" stroke-width="1" fill="none" transform="translate(58.000000, 39.000000)">
+                            <g id="Layer_1" fill="#FFFFFF">
+                                <ellipse id="Oval" cx="101.475" cy="27.7105263" rx="15.375" ry="15.3947368"></ellipse>
+                                <ellipse id="Oval" cx="21.525" cy="27.7105263" rx="15.375" ry="15.3947368"></ellipse>
+                                <ellipse id="Oval" cx="61.5" cy="18.4736842" rx="18.45" ry="18.4736842"></ellipse>
+                                <path d="M101.475,49.2631579 C98.4,49.2631579 91.635,50.4947368 89.175,52.3421053 C89.175,52.3421053 92.25,59.1157895 92.25,67.7368421 C92.25,67.7368421 84.87,43.1052632 61.5,43.1052632 C38.13,43.1052632 30.75,67.7368421 30.75,67.7368421 C30.75,59.1157895 33.825,52.3421053 33.825,52.3421053 C31.365,50.4947368 24.6,49.2631579 21.525,49.2631579 C11.07,49.2631579 0,61.5789474 0,69.5842105 L0,104.684211 C0,111.457895 5.535,117 12.3,117 L30.135,117 C35.67,111.457895 45.51,104.684211 61.5,104.684211 C77.49,104.684211 87.33,111.457895 92.865,117 L110.7,117 C117.465,117 123,111.457895 123,104.684211 L123,69.5842105 C123,61.5789474 110.7,49.2631579 101.475,49.2631579 L101.475,49.2631579 Z M61.5,98.5263158 C52.89,98.5263158 46.125,91.7526316 46.125,83.1315789 C46.125,74.5105263 52.89,67.7368421 61.5,67.7368421 C70.11,67.7368421 76.875,74.5105263 76.875,83.1315789 C76.875,91.7526316 70.11,98.5263158 61.5,98.5263158 L61.5,98.5263158 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

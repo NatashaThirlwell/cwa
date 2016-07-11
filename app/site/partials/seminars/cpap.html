@@ -1,0 +1,58 @@
+<navbar></navbar>
+
+<!-- Jumbotron -->
+<section class="jumbotron">
+	<div class="container">
+		<div class="centered">
+		<img class="cwa-logo" src="assets/img/seminar/cpap.svg">
+		<h1>Sleep Nuts and Bolts</h1>
+		<h3>Tools to Enhance CPAP Compliance and Optimize Sleep</h3>
+		</div>
+		<button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">Register for Seminar</button>
+	</div>
+</section>
+
+<!-- Second Nav -->
+<nav id="navbar" class="nav-2 navbar navbar-default navbar-fixed-top">
+  	<div class="nav-2_swap container-fluid">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+	      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		</div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="seminar_nav-2 nav navbar-nav navbar-right nav-2_main-info">
+		       <!-- All Seminars -->
+		       <li>
+		       	<a ng-click="ctrl.goAllSem()" class="sem-info blue-font">
+		       		CWA Seminars
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Sleep: CPAP -->
+		       <li>
+		       	<a ng-click="ctrl.goCpapSem()" class="sleepSem-info active blue-font">
+		       		Sleep Nuts and Bolts 
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- ICBT-I -->
+		       <li>
+		       	<a ng-click="ctrl.goLaserSem()" class="insomniaSem-info blue-font">
+		       		ICBT for Insomnia
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		    </ul>
+	    </div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav>
+
+<!-- Stay Connected -->
+<connected></connected>
+
+<footer></footer>

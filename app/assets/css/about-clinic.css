@@ -1,0 +1,78 @@
+/*Top*/
+.jumbotron .book-btn{
+	position: relative;
+	width: 25vw;
+	top: 6vw;
+	left: 26.5vw;
+}
+
+/*Content*/
+#about-clinic h3{
+	font-family: Raleway;
+}
+
+#about-clinic p, #about-clinic li{
+	font-family: Raleway;
+	font-size: 1.5vw;
+	color: #3D506E;
+}
+
+#about-clinic section{
+	max-width: 72.5vw;
+	position: relative;
+	top: 5vw;
+	left: 9vw;
+}
+
+/*Definition*/
+.defintion{
+	position: relative;
+	top: 5vw;
+	left: 4vw;
+}
+
+
+/*Location*/
+#about-clinic .location{
+	position: relative;
+	top: 7vw;
+}
+.google-map{
+	position: absolute;
+	left: 33.4vw;
+}
+
+.location-info ul{
+	width: 31.49vw;
+	height: 39.47vw;
+}
+
+.indent{
+	position: relative;
+	left: 2vw;
+}
+
+.num{
+	font-family: 'Montserrat Light';
+}
+
+/*International*/
+#about-clinic .int-services{
+	position: relative;
+	top: 10vw;
+}
+
+/*Bottom*/
+#about-clinic .bottom .book-btn{
+	top: 13vw;
+	left: 31vw;
+}
+
+#about-clinic .connected{
+	top: 9vw;
+	right: 10vw;
+}
+
+
+
+

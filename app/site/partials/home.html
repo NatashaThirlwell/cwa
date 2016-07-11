@@ -1,0 +1,125 @@
+
+<navbar></navbar>
+
+<!-- Jumbotron -->
+<section class="jumbotron">
+	<div class="container">
+		<div class="centered">
+		<img class="cwa-logo" src="assets/img/logo/Light-Blue-Logo.svg">
+		<h1>Cobalt Wellness Association</h1>
+		<h3>Revitalize your life with treatments provided through our clinics international
+		<br>
+		 Sleep Wake Awarness Program (SWAP) and Seminars.</h3>
+		</div>
+		<button ng-click="ctrl.goSwap()" class="b-therapies green-btn btn default-btn">Browse therapies</button>
+		<button ng-click="ctrl.goAllSem()" class="b-seminars green-btn btn default-btn">Browse Seminars</button>
+	</div>
+</section>
+
+<!-- Highlight-->
+<div id="highlight">
+	<div class="all-highlight container-fluid">
+		<div class="highlight">
+			<section class="row">
+				<article ng-click="ctrl.goClinic()" class="international col-md-4 col-sm-12 col-sx-12">
+					<div class="globe">
+						<img src="assets/img/services/international.svg">
+					</div>
+					<div class="text">
+						<h4>International Services</h4>
+						<p class="discription">Clinical + Web-Based Services</p>
+					</div>
+				</article>
+				<article ng-click="ctrl.goSwap()" class="home-swap col-md-4 col-sm-12 col-sx-12">
+					<div class="h-swap">
+						<img src="assets/img/services/swap.svg">
+					</div>
+					<div class="text">
+						<h4>SWAP</h4>
+						<p class="discription">Neuroscience-Based Integrative Health Care</p>
+					</div>
+				</article>
+				<article ng-click="ctrl.goAllSem()" class="learn col-md-4 col-sm-12 col-sx-12">
+					<div class="present">
+						<img src="assets/img/services/learn.svg">
+					</div>
+					<div class="text">
+						<h4>Educational Seminars</h4>
+						<p class="discription">Sleep-Wake Health Awareness </p>
+					</div>
+				</article>
+			</section>
+			<h2>Optimize your physical and mental wellbeing.</h2>
+		</div>
+		<button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">BOOK A FREE CONSULTATION</button>
+	</div>
+</div>
+
+<!-- Treatment + Benefits List -->
+<div id="treatments" class="treatments">
+	<!-- <section class="statement">
+		<h3>"SWAP changes maladaptive behavioral and psychological patterns affecting sleep,
+			<br>
+			thereby optimizing physical and mental health."</h3>
+	</section> -->
+	<h2>The CWA Clinic Provides Comprihensive Health Care</h2>
+	<div class="t-b-list container-fluid">
+		<div class="lists">
+			<section class="row">
+				<article class="col-md-6 col-sm-6 col-sx-12">
+					<div class="list t-list">
+						<h3>Availible Treatments</h3>
+						<ul class="treat">
+							<div class="treat-content">
+								<li></li><span>Insomnia</span>
+								<hr>
+								<li></li><span>Post Concussion Syndrome</span>
+								<hr>
+								<li></li><span>PTSD + Anxiety</span>
+								<hr>
+								<li></li><span>Chronic Pain + Chronic Fatigue</span>
+								<hr>
+								<li></li><span>Depression</span>
+								<hr>
+								<li></li><span>Diabetes + Obesity</span>
+								<hr>
+								<li></li><span>Sleep Apnea</span>
+							</div>
+						</ul>
+					</div>
+				</article>
+				<article class="col-md-6 col-sm-6 col-sx-12">
+					<div class="list b-list">
+						<h3>Potential Benefists</h3>
+						<ul class="benefit">
+							<div class="benefit-content">
+								<li></li><span>Prevention of Cardiac Disease</span>
+								<hr>
+								<li></li><span>Reduction of Pain Symptoms</span>
+								<hr>
+								<li></li><span>Improvement in Diabetic Control</span>
+								<hr>
+								<li></li><span>Increase in Energy + Weight Loss</span>
+								<hr>
+								<li></li><span>Improvement in Emotional Health</span>
+								<hr>
+								<li></li><span>Increase in Cognitive Functioning
+											<br>Memory + Concentration
+										</span>
+								<hr>
+								<li></li><span>Reduction of Stress</span>
+								<hr>
+								<li></li><span>Enhancement in Quality of Life</span>
+							</div>
+						</ul>
+					</div>
+				</article>
+			</section>
+		</div>
+		<!-- <button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">Book An appointment</button> -->
+	</div>
+</div>
+
+<connected></connected>
+
+<footer></footer>

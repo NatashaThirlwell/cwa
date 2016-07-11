@@ -1,0 +1,133 @@
+/*Navbar*/
+nav{
+	text-transform: uppercase;
+	font-family: montserrat-regular;
+	font-size: 1.1666666667vw;
+}
+
+/*Logo*/
+	.nav_logo{
+		max-height: 2.5vw;
+		margin: 0.83vw 3.3vw;
+	}
+
+	.nav_logo:hover {
+		cursor: pointer;
+  		cursor:hand;
+  		opacity: 1;
+		-webkit-animation: flash 1.5s;
+		animation: flash 1.5s;
+	}
+	@-webkit-keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+/*Font Colour*/
+	/*green tabs: hover*/
+	#navbar .green-font, #navbar .green-font:hover{
+		color: #85CF28;
+		background-color: #fff;
+	}
+
+	/*Blue font: hover, focus*/
+	#navbar .blue-font, #navbar .blue-font:hover, #navbar .blue-font:focus{
+		color:#2EC0F9;
+		background-color: #fff;
+	}
+
+	#navbar .lighten:hover{
+		color: #83C332;
+		background-color: #fff;
+		cursor: pointer;
+		cursor: hand;
+	}
+
+/*Define green-line + blue-lines*/
+.green-line{
+    background-color: #fff;
+    height: 0.1vw;
+    position: absolute;
+    right: 1.1vw;
+    top: 3vw;
+}
+	/*Green-line green when tab:hover*/
+	#navbar li:hover .green-line, #navbar .active .green-line{
+		background-color: #83C332;
+	}
+
+	/*Blue-line blue when tab:hover*/
+	#navbar .nav_profile-name:hover .blue-line{
+		background-color: #2EC0F9;
+	}
+
+	.nav_about .green-line{
+		width: 4.5vw;
+	}
+	.nav_swap .green-line{
+		width: 3.7vw;
+	}
+	.nav_events .green-line{
+		width: 6.5vw;
+	}
+
+	.nav_profile-name .green-line{
+		background-color: #2EC0F9;
+		width: 3.8vw;
+	}
+
+/*Main tabs*/
+	.nav_main-info{
+		position:relative;
+		right: 20vw;
+	}
+
+
+/*Name - Login*/
+#navbar .nav_profile-name{
+	left: 23.9vw;
+}
+
+/*Dropdown Edits*/
+.navbar-right .dropdown-menu{
+	right: auto;
+    left: 0;
+    border: none;
+}
+
+.dropdown-menu > li > a{
+	font-family: 'Montserrat Light', arial;
+}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

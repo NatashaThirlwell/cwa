@@ -1,0 +1,66 @@
+
+<navbar></navbar>
+
+<!-- Jumbotron -->
+<section class="jumbotron">
+	<div class="container">
+		<div class="centered">
+		<img class="sleep-jumbo" src="assets/img/therapy/sleep-jumbo.svg">
+		<h1>Sleep Therapy</h1>
+		<h3>Revitalize your life with theraputic services, events and workshops.</h3>
+		</div>
+		<button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">Book an appointment</button>
+	</div>
+</section>
+
+<!-- Second Nav -->
+<nav id="navbar" class="nav-2 navbar navbar-default navbar-fixed-top">
+  	<div class="nav-2_swap container-fluid">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+	      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		</div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav navbar-right nav-2_main-info">
+		       <!-- Swap -->
+		       <li>
+		       	<a ng-click="ctrl.goSwap()" class="swap-info blue-font">
+		       		What is SWAP
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Sleep -->
+		       <li>
+		       	<a ng-click="ctrl.goSleep()" class="sleep-info active blue-font">
+		       		Sleep Therapy
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Harmony -->
+		       <li>
+		       	<a ng-click="ctrl.goHarmony()" class="harmony-info blue-font">
+		       		Harmony
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Laser -->
+		       <li>
+		       	<a ng-click="ctrl.goLaser()" class="laser-info blue-font">
+		       		Laser Therapy
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		    </ul>
+	    </div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav>
+
+
+<connected></connected>
+
+<footer></footer>

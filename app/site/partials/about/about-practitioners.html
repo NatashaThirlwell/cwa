@@ -1,0 +1,99 @@
+
+<navbar></navbar>
+
+<!-- Jumbotron -->
+<section class="jumbotron">
+	<div class="container">
+		<div class="centered">
+		<img class="prac-img" src="assets/img/about/prac-jumbo.svg">
+		<h1>Practitioners</h1>
+		<h3>Revitalize your life with theraputic services, events and workshops.</h3>
+		</div>
+		<button ng-click="ctrl.openLogin()" class="book-btn green-btn btn default-btn">JOIN OUR COMMUNITY</button>
+	</div>
+</section>
+
+<!-- Second Nav -->
+<nav id="navbar" class="nav-2 navbar navbar-default navbar-fixed-top">
+  	<div class="nav-2_about container-fluid">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+	      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		</div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav navbar-right nav-2_main-info">
+		       <!-- Clinic -->
+		       <li>
+		       	<a ng-click="ctrl.goClinic()" class="clinic-info blue-font">
+		       		CWA Clinic
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Dr. -->
+		       <li>
+		       	<a ng-click="ctrl.goDr()" class="dr-info blue-font">
+		       		Dr. Celeste Thirlwell
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Practitioners -->
+		       <li>
+		       	<a ng-click="ctrl.goPrac()" class="prac-info active blue-font">
+		       		Practitioners
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		    </ul>
+	    </div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav>
+
+
+<!-- Practitioners-->
+<div id="practitioners">
+	<div class="all-prac container-fluid">
+		<div class="prac-info">
+			<section class="row">
+				<article ng-click="ctrl.goClinic()" class="international col-md-12 col-sm-12 col-sx-12">
+					<div class="globe">
+						<img src="assets/img/services/international.svg">
+					</div>
+					<div class="text">
+						<h4>International Services</h4>
+						<p class="discription">Clinical + Web-Based Services</p>
+					</div>
+				</article>
+				<article ng-click="ctrl.goSwap()" class="home-swap col-md-12 col-sm-12 col-sx-12">
+					<div class="h-swap">
+						<img src="assets/img/services/swap.svg">
+					</div>
+					<div class="text">
+						<h4>SWAP</h4>
+						<p class="discription">Neuroscience-Based Integrative Health Care</p>
+					</div>
+				</article>
+				<article ng-click="ctrl.goAllSem()" class="learn col-md-4 col-sm-12 col-sx-12">
+					<div class="present">
+						<img src="assets/img/services/learn.svg">
+					</div>
+					<div class="text">
+						<h4>Educational Seminars</h4>
+						<p class="discription">Sleep-Wake Health Awareness </p>
+					</div>
+				</article>
+			</section>
+			<h2>Optimize your physical and mental wellbeing.</h2>
+		</div>
+		<button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">BOOK A FREE CONSULTATION</button>
+	</div>
+</div>
+
+<!-- Stay Connected -->
+<connected></connected>
+
+<footer></footer>

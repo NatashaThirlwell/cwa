@@ -1,0 +1,88 @@
+/*NAV-2*/
+.nav-2{
+	border: 1px solid #CAC9C9;
+	position: relative;
+	z-index: 0;
+	top: 4vw;
+}
+	.nav-2 .nav-2_main-info{
+		position: relative;
+	}
+	.nav-2 .nav-2_main-info li:hover{
+		cursor: pointer;
+	}
+
+	/*Nav-2 green line*/
+	#navbar .nav-2_main-info li:hover .green-line, #navbar .nav-2_main-info .active .green-line{
+		background-color: #85CF28;
+		height: 0.2vw;
+	}
+		/*ABOUT NAV-2*/
+		.nav-2 .nav-2_about .nav-2_main-info{
+			right: 3.4vw;
+		}
+			.nav-2 .nav-2_about .nav-2_main-info li{
+				margin: 0vw 7vw;
+			}
+			/*green lines*/
+			.nav-2 .clinic-info .green-line{
+				width: 7.1vw;
+			}
+			.nav-2 .dr-info .green-line{
+				width: 14.4vw;
+			}
+			.nav-2 .prac-info .green-line{
+				width: 9.5vw;
+			}
+
+		/*SWAP NAV-2*/
+		.nav-2 .nav-2_swap .nav-2_main-info{
+			right: 2.4vw;
+		}
+			.nav-2 .nav-2_swap .nav-2_main-info li{
+				margin: 0vw 5vw;
+			}
+			/*green lines*/
+			.nav-2 .swap-info .green-line{
+				width: 8.9vw;
+			}
+			.nav-2 .sleep-info .green-line{
+				width: 9.7vw;
+			}
+			.nav-2 .harmony-info .green-line{
+				width: 6.4vw;
+			}
+			.nav-2 .laser-info .green-line{
+				width: 9.75vw;
+			}
+
+		/*SEMINAR NAV-2*/
+		.nav-2 .nav-2_seminars .nav-2_main-info{
+			right: 2.4vw;
+		}
+			.nav-2 .nav-2_seminars .nav-2_main-info li{
+				margin: 0vw 5vw;
+			}
+			/*green lines*/
+			.nav-2 .allSem-info .green-line{
+				width: 8.9vw;
+			}
+			.nav-2 .cpapSem-info .green-line{
+				width: 9.7vw;
+			}
+			.nav-2 .laserSem-info .green-line{
+				width: 6.4vw;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+

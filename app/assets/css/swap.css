@@ -1,0 +1,91 @@
+#swap-page h3{
+	font-family: Raleway;
+}
+
+#swap-page p, #swap-page li{
+	font-family: Raleway;
+	font-size: 1.5vw;
+	color: #3D506E;
+}
+
+#swap-page section{
+	max-width: 79vw;
+}
+
+/*What is SWAP*/
+.defintion{
+	position: relative;
+	top: 5vw;
+	left: 4vw;
+}
+
+.statement h3{
+	color:#71A0F2;
+	font-weight: 300;
+	position: relative;
+	top: 7vw;
+	left: 4vw;
+	text-align: center;
+}
+
+/*Highlights*/
+	
+	.sleep, .harmony, .laser{
+		color:white;
+		text-align:center;
+		border-radius: 4%;
+		margin:1vw;
+		padding:2.5vw;
+		width: 20.8vw;
+		min-height: 18.67vw;
+		position: relative;
+    	left: 10vw;
+	}
+
+		.sleep{
+			background: #36A8F3;
+		}
+
+		.harmony{
+			background: #3694F3;
+		}
+
+		.laser{
+			background: #367AF3;
+		}
+
+	/*hover*/
+	.sleep:hover, .harmony:hover, .laser:hover{
+		cursor: pointer;
+		cursor: hand;
+		opacity: 1;
+		-webkit-animation: flash 1.5s;
+		animation: flash 1.5s;
+	}
+	@-webkit-keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+
+
+
+/*SLEEP*/
+
+
+/*HARMONY*/
+
+
+/*LASER*/

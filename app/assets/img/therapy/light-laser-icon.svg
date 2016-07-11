@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128px" height="115px" viewBox="0 0 128 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="64" cy="57.456042" rx="64" ry="57.155458"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="128" height="114.310916" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABOUT-Page--LASER-THERAPY" transform="translate(-112.000000, -152.000000)">
+            <g id="Hero" transform="translate(112.000000, 104.000000)"></g>
+            <g id="Icon" transform="translate(112.000000, 152.000000)">
+                <g id="Laser-Prism" transform="translate(3.840000, 3.729912)">
+                    <g id="Group" transform="translate(0.000000, -0.000000)">
+                        <g id="Artboard" transform="translate(0.000000, -0.000000)"></g>
+                        <g id="Multicolor" transform="translate(0.000000, -0.000000)">
+                            <path d="M60.16,107.452261 C93.3854505,107.452261 120.32,83.3982531 120.32,53.7261305 C120.32,24.054008 93.3854505,-3.48165941e-13 60.16,-3.48165941e-13 C26.9345495,-3.48165941e-13 9.09494702e-13,24.054008 9.09494702e-13,53.7261305 C9.09494702e-13,83.3982531 26.9345495,107.452261 60.16,107.452261 Z" id="Oval" fill="#1482F1"></path>
+                            <g id="Group" transform="translate(29.533091, 22.467291)">
+                                <rect id="Rectangle-path" fill="#D2E2FF" x="17.5010909" y="19.5367747" width="26.2516364" height="23.4441297"></rect>
+                                <polygon id="Shape" fill="#FFFFFF" points="43.7527273 19.5367747 61.2538182 9.76838737 43.7527273 -4.45865567e-13 17.5010909 -4.45865567e-13 0 9.76838737 17.5010909 19.5367747"></polygon>
+                                <polygon id="Shape" fill="#A1BFF4" points="0 9.76838737 0 52.7492918 17.5010909 42.9809044 17.5010909 19.5367747"></polygon>
+                                <polygon id="Shape" fill="#A1BFF4" points="61.2538182 52.7492918 61.2538182 9.76838737 43.7527273 19.5367747 43.7527273 42.9809044"></polygon>
+                                <rect id="Rectangle-path" fill="#FFFFFF" x="17.5010909" y="42.9809044" width="26.2516364" height="19.5367747"></rect>
+                                <polygon id="Shape" fill="#C2DEF8" points="17.5010909 42.9809044 0 52.7492918 17.5010909 62.5176791"></polygon>
+                                <polygon id="Shape" fill="#C2DEF8" points="43.7527273 62.5176791 61.2538182 52.7492918 43.7527273 42.9809044"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <use id="Light" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+            </g>
+            <g id="Navbar" transform="translate(0.000000, -1.000000)"></g>
+        </g>
+    </g>
+</svg>

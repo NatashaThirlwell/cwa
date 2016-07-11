@@ -1,0 +1,239 @@
+
+html,body{
+	margin:0;
+	height:100%;
+}
+
+h2{
+	font-family: Raleway;
+	color: #0D47A6;
+}
+
+h3{
+	/*font-size: 2vw;*/
+	font-family: 'Montserrat Light', arial;
+	color: #3066BE;
+	line-height: 3vw;
+}
+
+h4{
+	font-family: Montserrat;
+
+}
+
+/*Jumbotron*/
+.jumbotron .centered{
+	position: relative;
+	top:5vw;
+	text-align: center;
+}
+
+.jumbotron img{
+	height: 10.125vw;
+}
+
+	.cwa-logo {
+		width:25.83vw;
+	}
+
+	.jumbotron h1{
+		font-size: 4.3vw;
+		font-family: Raleway;
+		color: #0D47A6;
+	}
+
+	.jumbotron .b-therapies{
+		position: relative;
+		top:7.5vw;
+		left:21.9vw;
+		border-color: #fff;
+		border-top-left-radius: 5.167vw;
+		border-top-right-radius: 0vw;
+		border-bottom-left-radius: 5.167vw;
+		border-bottom-right-radius: 0vw;
+	}
+
+	.jumbotron .b-seminars{
+		position: relative;
+		top:7.5vw;
+		left:21.4vw;
+		border-color: #fff;
+		border-top-left-radius: 0vw;
+		border-top-right-radius: 5.167vw;
+		border-bottom-left-radius: 0vw;
+		border-bottom-right-radius: 5.167vw;
+	}
+
+/*Highlights*/
+.highlight h2{
+	font-size: 2vw;
+	text-align: center;
+	position: relative;
+	top: 0.5vw;
+}
+
+.all-highlight{
+	position: relative;
+	top: 9vw;
+}
+	
+	.international, .home-swap, .learn{
+		text-align:center;
+		border-radius: 4%;
+		margin:1vw;
+		padding:2.5vw;
+		width: 20.8vw;
+		min-height: 18.67vw;
+		position: relative;
+    	left: 10vw;
+	}
+		.highlight .text{
+			position: relative;
+			top: 0.5vw;
+		}
+
+		.international{
+			color: #36A8F3;
+			border: 3px solid #36A8F3;
+		}
+
+		.home-swap{
+			color: #3694F3;
+			border: 3px solid #3694F3;
+		}
+
+		.learn{
+			color: #367AF3;
+			border: 3px solid #367AF3;
+		}
+
+	/*hover*/
+	.international:hover, .home-swap:hover, .learn:hover{
+		cursor: pointer;
+		cursor: hand;
+		opacity: 1;
+		-webkit-animation: flash 1.5s;
+		animation: flash 1.5s;
+	}
+	@-webkit-keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes flash {
+		0% {
+			opacity: .4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+		/*text*/
+		.discription {
+			font-family: 'Montserrat Light', arial;
+		}
+
+	.book-btn{
+		position: relative;
+	    width: 33vw;
+	    top: 2.5vw;
+		left: 27vw;
+	}
+		.book-btn:focus{
+			top: 2.5vw;
+			left: 27vw;
+		}
+
+
+/*Treatments + Benefits*/
+.t-b-list{
+	position: relative;
+	top: 18vw;
+}
+
+#treatments h2{
+	/*color: #3066BE;*/
+	font-size: 2.5vw;
+	text-align: center;
+	line-height: 3.5vw;
+	position: relative;
+	top: 17.5vw;
+}
+
+#treatments h3{
+	font-family: Raleway;
+	position: relative;
+}
+	.t-list h3{
+		left:6vw;
+	}
+
+	.b-list h3{
+		left:6vw;
+	}
+
+	/*Grey Box*/
+	.lists{
+		position: relative;
+		top: 0.5w;
+	}
+	.t-b-list ul{
+		width: 30vw;
+		height: 41vw;
+		border: 1px solid #CAC9C9;
+		list-style-image: url('../img/symbols/check-mark.svg');
+	}
+		.treat-content{
+			position: relative;
+			top: 0.5vw;
+		}
+			.treat-content hr{
+				border-top: 1px solid #CAC9C9;
+				margin: 0.5vw 0vw;
+			    position: relative;
+			    right: 1.5vw;
+			}
+
+			.benefit-content hr{
+				border-top: 1px solid #CAC9C9;
+				margin: 0vw;
+			    position: relative;
+			    right: 1.5vw;
+			}
+
+		.list li{
+			position: relative;
+			top: 1.5vw;
+			left: 2vw;
+			line-height: 3vw;
+		}
+
+			.list span{
+				font-family: 'Montserrat Light', arial;
+			    font-size: 1.3vw;
+			    color: #3D506E;
+				position: relative;
+			    bottom: 1.4vw;
+			    left: 3vw;
+			}
+
+		.t-list{
+			position: relative;
+    		left: 11vw;
+		}
+
+
+
+
+
+
+
+
+
+
+
+

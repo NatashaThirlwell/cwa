@@ -1,0 +1,48 @@
+/*Top*/
+#about-dr .book-btn{
+	position: relative;
+	width: 25vw;
+	top: 6vw;
+	left: 26.5vw;
+}
+
+
+#about-clinic .dr p{
+	width: 31.49vw;
+	height: 39.47vw;
+}
+
+#about-clinic .dr img{
+	position: relative;
+    bottom: 43vw;
+    left: 40vw;
+}
+
+#about-clinic .dr .bottom .book-btn{
+	top: 6vw;
+	left:-17vw;
+}
+
+/*bottom*/
+#about-dr .connected{
+	position: absolute;
+    top: 46vw;
+}
+
+#about-dr footer{
+	position: absolute;
+    top: 82vw;
+}
+
+
+/*Bio*/
+/*.bio h3{
+	position: relative;
+	top: 2vw;
+}
+
+.e-list{
+	position: relative;
+	bottom: 7vw;
+	right: 11vw;
+}*/

@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://allfont.net/allfont.css?fonts=montserrat-light);
+
+/*BUTTONS*/
+
+/*White -> Green */
+	.w-green-btn, .w-green-btn:focus {
+		font-family: montserrat;
+		text-transform: uppercase;
+		color: #85CF28;
+		background-color: #fff;
+		border: 0.16vw solid #85CF28; 
+		border-radius: 5.167vw;
+		padding: 0.416vw 2.5vw;
+		position: relative;
+		top: 0.74vw;
+		left: 18.5vw;
+	}
+
+/*Green */
+	.green-btn, .green-btn:focus {
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #85CF28;
+		border: 0.16vw solid #85CF28; 
+		border-radius: 5.167vw;
+		padding: 0.416vw 2.5vw;
+		position: relative;
+		top: 7.74vw;
+		left: 30vw;
+	}
+
+/*Green Btns Hover*/
+.green-btn:hover{
+	background: #8FDE2C;
+	border-color: #8FDE2C;
+	color: #fff;
+}
+
+.w-green-btn:hover {
+	background: #8FDE2C;
+	border-color: #8FDE2C;
+	color: #fff;
+}

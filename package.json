@@ -1,0 +1,26 @@
+{
+  "name": "cwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Natasha Thirlwell",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-touch": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^7.0.0",
+    "pg": "^4.5.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.23.2"
+  }
+}

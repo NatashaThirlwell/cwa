@@ -1,0 +1,31 @@
+.modal-content{
+	position: relative;
+    right: 4vw;
+    width: 58vw;
+}
+
+.close-btn{
+	font-family: 'montserrat light';
+	color: #9B9B9B;
+	width: 10vw;
+    border-radius: 2vw;
+	position: absolute;
+/*	top: 61vw;
+	left: 24vw;*/
+    top: 2vw;
+    left: 4vw;
+}
+
+.book-logo{
+	position: relative;
+    top: 3vw;
+    left: 19.5vw;
+}
+
+.book{
+	position: relative;
+	top: 2vw;
+    left: 2.35vw;
+    max-width: 49vw
+}
+

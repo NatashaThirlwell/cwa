@@ -1,0 +1,114 @@
+
+<navbar></navbar>
+
+<!-- Jumbotron -->
+<section id="about-clinic" class="jumbotron">
+	<div class="container">
+		<div class="centered">
+		<img class="cwa-logo" src="assets/img/logo/Light-Blue-Logo.svg">
+		<h1>The Cobalt Clinic</h1>
+		<h3>CWA's Toronto community-based clinic providing international 
+			<br>
+			sleep-wake health treatment and education.</h3>
+		</div>
+		<button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">Book a service</button>
+</section>
+
+<!-- Second Nav -->
+<nav id="navbar" class="nav-2 navbar navbar-default navbar-fixed-top">
+  	<div class="nav-2_about container-fluid">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+	      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		</div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav navbar-right nav-2_main-info">
+		       <!-- Clinic -->
+		       <li>
+		       	<a ng-click="ctrl.goClinic()" class="clinic-info active blue-font">
+		       		CWA Clinic
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Dr. -->
+		       <li>
+		       	<a ng-click="ctrl.goDr()" class="dr-info blue-font">
+		       		Dr. Celeste Thirlwell
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		       <!-- Practitioners -->
+		       <li>
+		       	<a ng-click="ctrl.goPrac()" class="prac-info blue-font">
+		       		Practitioners
+		       		<div class="green-line"></div>
+		       	</a>
+		       </li>
+		    </ul>
+	    </div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav>
+
+<!-- Clinc information  -->
+<div id="about-clinic" class="container">
+	<!-- Definition -->
+	<section class="definition">
+		<h3>The Cobalt Clinic</h3>
+		<p>CWA's Cobalt Clinic focuses on treating disorders that are bi-directionally related to sleep. We are dedicated to helping clients swap their maladaptive behavioural and psychological patterns affecting sleep, in order to optimized their physical and mental health.		
+		To do so, we empliment our Sleep Wake Awarness Program (SWAP) methodology by using cutting-edge, integrative health care treatments as well as providing educational seminars to allied health care professionals and clients. </p>
+	</section>
+	<!-- Location -->
+	<section class="location">
+		<h3>Located in Downtown Toronto</h3>
+		<!-- Google map -->
+		<div class="google-map">
+			<div style="width:480px;overflow:hidden;height:250px;max-width:100%;"><div id="gmap_canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=226+Bathurst+Street,+Toronto,+ON,+Canada&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-html" rel="nofollow" href="https://www.hostingreviews.website/compare/fatcow-vs-dreamhost" id="authorize-maps-data">fatcow dreamhost</a><style>#gmap_canvas .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=27ad2cf5-ddcc-60c1-4a92-cbdd328a2d6a&c=google-html&u=1464921021" defer="defer" async="async"></script>
+		</div>
+		<p class="location-info">
+			<ul>
+				<li>
+					<strong>Our address is:</strong>
+					<br>
+					<span class="indent">
+						<span class="num">226</span> Bathurst St, 
+						<br>
+						Toronto, ON 
+						<br>
+						<span class="num">M5T 2R9</span>, Canada 
+					</span>
+				</li>
+				<br>
+				<li>
+					<strong>Easily accessed via public transportation:</strong>
+					<br>
+					<span class="indent">
+						- Billy Bishop Airport
+						<br>
+						- Bathurst Subway Station
+						<br>
+						- Major TTC routes
+					</span>
+				</li>
+			</ul> 
+		</p>
+	</section>
+	<!-- International -->
+	<section class="int-services">
+		<h3>National and International Service</h3>
+		<p>
+			The Cobalt Clinic also provides outreach care and training to under serviced areas in Ontario via the Ontario Telemedicine Network (OTN) as well as nationally and internationally via Skype.
+		</p>
+	</section>
+	<div class="bottom">
+		<button ng-click="ctrl.openBook()" class="book-btn green-btn btn default-btn">Book a service</button>
+	</div>
+	<!-- Stay Connected -->
+	<connected class="connected"></connected>
+</div>
+
+<footer></footer>

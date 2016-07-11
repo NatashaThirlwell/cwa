@@ -1,0 +1,14 @@
+#navbar .seminar_nav-2{
+	position: relative;
+	right: 7vw;
+}
+
+	.nav-2 .sem-info .green-line {
+    	width: 9.55vw;
+	}
+	.nav-2 .sleepSem-info .green-line {
+    	width: 14.4vw;
+	}
+	.nav-2 .insomniaSem-info .green-line {
+    	width: 12vw;
+	}

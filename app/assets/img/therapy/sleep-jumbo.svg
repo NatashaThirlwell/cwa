@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="191px" height="191px" viewBox="0 0 191 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Zzz Icon Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABOUT-Page--SLEEP-THERAPY" transform="translate(-402.000000, -95.000000)">
+            <g id="Hero" transform="translate(112.000000, 95.000000)">
+                <g id="Image-of-Dr.-Celeste" transform="translate(290.000000, 0.000000)">
+                    <g id="Zzz-Icon-Copy" transform="translate(2.472973, 2.261261)">
+                        <path d="M93.5,186.451377 C145.138624,186.451377 187,144.712815 187,93.2256886 C187,41.7385625 145.138624,0 93.5,0 C41.8613759,0 0,41.7385625 0,93.2256886 C0,144.712815 41.8613759,186.451377 93.5,186.451377 Z" id="Sleep" stroke="#FFFFFF" stroke-width="3" fill="#36A8F3"></path>
+                        <g id="Zzz" transform="translate(29.920000, 43.188542)" font-family="Montserrat-Regular, Montserrat" font-weight="normal">
+                            <text id="sm-Z" font-size="29.9745637" letter-spacing="0.771428585" fill="#FFFFFF">
+                                <tspan x="108.46" y="30">Z</tspan>
+                            </text>
+                            <text id="md-Z" font-size="39.966085" letter-spacing="1.02857149" fill="#FFFFFF">
+                                <tspan x="69.19" y="51.1870826">Z</tspan>
+                            </text>
+                            <text id="Lg-Z" font-size="79.93217" letter-spacing="2.05714297" fill="#EBF5FC">
+                                <tspan x="0" y="96.6903837">Z</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g id="Navbar" transform="translate(0.000000, -1.000000)">
+                <g id="Tabs" transform="translate(421.000000, 14.391304)">
+                    <g id="Group-2" transform="translate(0.000000, 4.778696)"></g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,180 @@
+/*All*/
+	.login-modal{
+		font-family: Raleway;
+		height: 27vw;
+	}
+
+	.register-modal{
+		font-family: Raleway;
+		height: 37vw;
+	}
+
+
+	.login-wrapper {
+		position: relative;
+    	top: 4vw;
+	}
+
+/*Title*/
+	.title{
+		position: relative;
+		top: 1.5vw;
+	}
+
+/*Lable*/
+	#auth label{
+		font-weight: 300;
+		font-size: 1.4vw;
+		color: #4A90E2;
+		text-align: left;
+		position: absolute;
+		bottom: 2.4vw;
+		left: 6.4vw;
+	}
+/*Input*/
+
+	/*Names*/
+	.name{
+		max-width: 16vw;
+	}
+
+	.first-name{
+		position: relative;
+		left: 2vw;
+	}
+
+	.last-name{
+		position: relative;
+		bottom: 2.75vw;
+		left: 21vw;
+	}
+		#auth .first-name label, #auth .last-name label{
+			left: 4vw;
+		}
+
+	/*green input*/
+	.green-input{
+		color: #2ECCF9;
+		background-color: #fff;
+		border: 0.16vw solid #85CF28; 
+		border-radius: 5.167vw;
+		padding: 0.416vw 2.5vw;
+		position: relative;
+		top: 0vw;
+		left: 0vw;
+		width: 35vw;
+	}
+
+		.green-input:hover, .green-input:focus{
+			border: 0.16vw solid #2ECCF9;
+			outline:0px !important;
+    		-webkit-appearance:none;
+		}
+
+		.green-input::-webkit-input-placeholder {
+			font-family: 'Montserrat Light', arial;
+		}
+
+		/*lower password feilds*/
+		.password-field{
+			top: 3.4vw;
+		}
+		.re-password-field{
+			top: 6.8vw;
+		}
+		
+
+
+/*Auth btns*/
+.auth-btns{
+	font-family: Montserrat;
+	position: relative;
+	top: 5.5vw;
+}
+	.btn:focus{
+		outline:0px !important;
+    	-webkit-appearance:none;
+	}
+
+	/*Login-btn*/
+	.login-btn, .login-btn:visited{
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #2EC0F9;
+		border: 0.16vw solid #2EC0F9; 
+		border-radius: 5.167vw;
+		padding: 0.416vw 2.5vw;
+		position: relative;
+		right: 8.5vw;
+	}
+		.login .btn{
+			color: #fff
+		}
+
+		.login-btn:hover{
+			background-color: #2ECCF9;
+			border: 0.16vw solid #2ECCF9;
+		}
+
+	/*Create new account btn*/
+	.new-btn, .new-btn:visited{
+		text-transform: uppercase;
+		color: #85CF28;
+		background-color: #fff;
+		border: 0.16vw solid #85CF28; 
+		border-radius: 5.167vw;
+		padding: 0.416vw 2.5vw;
+		position: relative;
+		bottom: 2.75vw;
+    	left: 5.5vw;
+	}
+		.log-register .new-btn{
+			top: 0.75vw;
+			left:8vw;
+		}
+		.register .btn:hover, .register .btn:focus, .log-register .btn:hover, .log-register .btn:focus{
+			color: #fff;
+			background: #8FDE2C;
+			border-color: #8FDE2C;
+		}
+
+	/*Register btn*/
+		.reg-btn, .reg-btn:visited{
+			text-transform: uppercase;
+			color: #fff;
+			background-color: #2EC0F9;
+			border: 0.16vw solid #2EC0F9; 
+			border-radius: 5.167vw;
+			padding: 0.416vw 2.5vw;
+			position: relative;
+			top: 3.5vw;
+			right: 9vw;
+		}
+			.reg-btn:hover{
+				background-color: #2ECCF9;
+				border: 0.16vw solid #2ECCF9;
+			}
+
+/*Forgot Password*/
+	.forgot-password{
+		color: #9B9B9B;
+	    position: relative;
+		top: 5vw;
+	}
+		.forgot-password:hover{
+			color: #868786;
+			text-decoration: none;
+			cursor: pointer;
+			cursor: hand;
+		}
+
+
+
+
+
+
+
+
+
+
+
