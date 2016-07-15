@@ -16,26 +16,26 @@
 		// HOME
 			.state('home',{
 				url:'/',
-            	templateUrl: 'site/partials/home.html',
+            	templateUrl: 'site/main/home/partial-home.html',
             	controller:'HomeCtrl as ctrl'
             	})
 
 		// ABOUT
 			.state('about-clinic',{
 				url:'/about/clinic',
-				templateUrl:'site/partials/about/about-clinic.html',
+				templateUrl:'site/main/about/clinic/partial-clinic.html',
 				controller:'ClinicCtrl as ctrl',
 			})
 
 			.state('about-dr',{
 				url:'/about/dr-celeste-thirlwell',
-				templateUrl:'site/partials/about/about-dr.html',
+				templateUrl:'site/main/about/dr/partial-dr.html',
 				controller:'DrCtrl as ctrl'
 			})
 
 			.state('about-practitioners',{
 				url:'/about/practitioners',
-				templateUrl:'site/partials/about/about-practitioners.html',
+				templateUrl:'site/main/about/practitioners/partial-prac.html',
 				controller:'PractitionersCtrl as ctrl'
 			})
 
@@ -43,58 +43,58 @@
 		// SWAP
 			.state('swap-info',{
 				url:'/swap',
-				templateUrl:'site/partials/swap/swap-info.html',
+				templateUrl:'site/main/swap/partial-swap_info.html',
 				controller:'SwapCtrl as ctrl'
 			})
 
 			.state('sleep',{
 				url:'/swap/sleep-therapy',
 				controller:'SwapCtrl as ctrl',
-				templateUrl:'site/partials/swap/sleep.html',
+				templateUrl:'site/main/swap/partial-sleep.html',
 			})
 
 			.state('harmony',{
 				url:'/swap/harmony',
 				controller:'SwapCtrl as ctrl',
-				templateUrl:'site/partials/swap/harmony.html',
+				templateUrl:'site/main/swap/partial-harmony.html',
 			})
 
 			.state('laser',{
 				url:'/swap/laser-therapy',
 				controller:'SwapCtrl as ctrl',
-				templateUrl:'site/partials/swap/laser.html',
+				templateUrl:'site/main/swap/partial-laser.html',
 			})
 
 		// Seminars
 			.state('all',{
 				url:'/seminars',
-				templateUrl:'site/partials/seminars/all.html',
+				templateUrl:'site/main/seminars/partial-all.html',
 				controller:'SeminarsCtrl as ctrl',	
 			})
 			.state('cpap',{
 				url:'/seminars/cpap',
-				templateUrl:'site/partials/seminars/cpap.html',
+				templateUrl:'site/main/seminars/partial-cpap.html',
 				controller:'SeminarsCtrl as ctrl',	
 			})
 
 			.state('laser-sem',{
 				url:'/seminars/laser',
-				templateUrl:'site/partials/seminars/laser.html',
+				templateUrl:'site/main/seminars/partial-laser.html',
 				controller:'SeminarsCtrl as ctrl',	
 			})
 
 		// SCHEDUALISTA
 			.state('book',{
 				url:'/book',
-				templateUrl:'site/partials/book.html',
+				templateUrl:'site/main/book/partial-book.html',
 				controller:'BookCtrl as ctrl',	
 			})
 
 		// USER PROFILES
-			.state('user',{
+			.state('client',{
 					url:'/client/:userId',
-					templateUrl:'site/partials/users/user.html',
-					controller:'UserCtrl as ctrl',
+					templateUrl:'site/profile/partial-client.html',
+					controller:'ClientCtrl as ctrl',
 			})
 
 		// ADMIN PROFILES

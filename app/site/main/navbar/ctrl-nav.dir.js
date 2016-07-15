@@ -6,7 +6,7 @@
 				scope:true,
 				controller:'NavbarCtrl',
 				controllerAs:'ctrl',
-				templateUrl:'/site/partials/navbar.html'
+				templateUrl:'/site/main/navbar/partial-nav.html'
 			};
 		});
 

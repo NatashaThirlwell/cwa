@@ -1,0 +1,93 @@
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span><img ng-click="ctrl.goHome()" id="logo" class="nav_logo" src="assets/img/logo/Light-Blue-Logo.svg"></span>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right nav_main-info">
+               
+               <!-- About -->
+                <li id="about" class="nav_about">
+                    <a class="green-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT<div class="green-line"></div></a>
+                    <ul class="green-font dropdown-menu">
+                        <li><a ng-click="ctrl.goClinic()" class="green-font lighten">CWA Clinic</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goDr()" class="green-font lighten">Dr. Celeste</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goPrac()" class="green-font lighten">Practitioners</a></li>
+                    </ul>
+                </li>
+
+                 <!-- SWAP -->
+                <li id="swap" class="nav_swap">
+                    <a class="green-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SWAP<div class="green-line"></div></a>
+                    <ul class="green-font dropdown-menu">
+                        <li><a ng-click="ctrl.goSwap()" class="green-font lighten">What is SWAP</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goSleep()" class="green-font lighten">Sleep Therapy</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goHarmony()" class="green-font lighten">Harmony</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goLaser()" class="green-font lighten">Laser Therapy</a></li>
+                    </ul>       
+                </li>
+
+                 <!-- Events -->
+                <li id="events" class="nav_events">
+                    <a class="green-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SEMINARS<div class="green-line"></div></a>
+                    <ul class="dropdown-menu">
+                        <li><a ng-click="ctrl.goAllSem()" class="green-font lighten">CWA Seminars</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goCpapSem()" class="green-font lighten">CPAP</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.goLaserSem()" class="green-font lighten">LASER</a></li> 
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Articles -->
+                <!-- <li id="articles" class="nav_articles">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ARTICLES<img src="assets/img/green-line.png"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sleep Therapy</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Harmony</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Laser Therapy</a></li>
+                    </ul>
+                </li> -->
+
+            <ul class="nav navbar-nav navbar-right nav_login-info">
+                <!-- Book -->
+                <a ng-click="ctrl.openBook()" ng-hide='ctrl.logged' id="login" class="w-green-btn btn default-btn">BOOK OR REGISTER</a>
+
+                <!-- Login -->
+                <!-- <a ng-click="ctrl.openLogin()" ng-hide='ctrl.logged' id="login" class="nav_login w-green-btn btn default-btn">LOGIN</a> -->
+
+                 <!-- Name -->
+              <!--   <li id="profile-name" class="nav_profile-name">
+                    <a ng-show="ctrl.logged" class="blue-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NAME<div class="green-line blue-line"></div></a>
+                    <ul class="blue-font dropdown-menu"> -->
+                        <!-- <li><a href="#" class="blue-font">Home</a></li>
+                        <li role="separator" class="divider"></li> -->
+                       <!--  <li><a href="#" class="blue-font">Articles</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" class="blue-font">Book Service</a></li>
+                        <li role="separator" class="divider"></li> -->
+                       <!--  <li><a ng-click="ctrl.logout" class="blue-font">Logout</a></li> -->
+                    </ul>
+                </li> <!-- end name -->
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

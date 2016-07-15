@@ -1,9 +1,9 @@
 (function(){
   angular
     .module('cwaApp')
-    .controller('UserCtrl',UserCtrl)
+    .controller('ClientCtrl',ClientCtrl)
 
-    function UserCtrl($scope, $state, userSrv){
+    function ClientCtrl($scope, $state, userSrv){
         var userVm = this;
         userVm.state = $state;
 

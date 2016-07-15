@@ -6,7 +6,7 @@
         scope:true,
         controller: "ConnectedCtrl",
         controllerAs: "ctrl",
-        templateUrl: "/site/partials/connected.html"
+        templateUrl: "/site/main/connected/partial-connected.html"
 
       };
   });

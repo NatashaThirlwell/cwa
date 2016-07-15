@@ -6,7 +6,7 @@
         scope:true,
         controller: "footerCtrl",
         controllerAs: "ctrl",
-        templateUrl: "/site/partials/footer.html"
+        templateUrl: "/site/main/footer/partial-foot.html"
 
       };
   });
