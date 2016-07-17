@@ -19,6 +19,8 @@
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "jsonwebtoken": "^7.0.0",
+    "mongodb": "^2.2.2",
+    "mongoose": "^4.5.4",
     "pg": "^4.5.5",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.23.2"

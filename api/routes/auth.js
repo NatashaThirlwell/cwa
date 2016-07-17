@@ -1,4 +1,5 @@
-var models 	= require('./../models');
+// var models 	= require('./../models');
+var Clients	= require('./../models/Clients')
 var bcrypt	= require('bcrypt');
 var jwt		= require('jsonwebtoken');
 var router 	= require('express').Router();
@@ -7,16 +8,24 @@ var router 	= require('express').Router();
 router.post('/register',function(req,res){
 	console.log('Registration Endpoint');
 	var __user = req.body;
-
+	console.log(__user)
 	bcrypt.genSalt(10, function(err, salt) {
 	    bcrypt.hash(__user.password, salt, function(err, hash) {
 	    	if(!err){
+	    		console.log('hashed',hash)
 	    		__user.password = hash;
-		        	models.Users.create(__user)
+		        // models.Users.create(__user)
+		        var newClient = Clients(__user)
+		        newClient.save()
 		        	.then(function(user){
-		        	user.password ='';
-		        	res.json({user:user,msg:'Account Created'});
-		        })
+		        		console.log(user)
+		        		user.password ='';
+		        		res.json({user:user,msg:'Account Created'});
+		       		})
+		       		.catch(function(err){
+		       			console.log(err)
+		       			res.json({err:err,msg:'Account creation failed'})
+		       		})
 	        }
 	    });
 	});
@@ -26,8 +35,9 @@ router.post('/authenticate',function(req,res){
 	console.log('Authentication Endpoint');
 	var __user = req.body;
 
-	var where = {where:{email:__user.email}};
-	models.Users.find(where)
+	var where = {email:__user.email};
+	// models.Users.find(where)
+	Clients.findOne(where)
 	.then(function(user){
 		bcrypt.compare(__user.password, user.password, function(err, result) {
 		    // res == true 
@@ -45,7 +55,11 @@ router.post('/authenticate',function(req,res){
 		    		.json({err:'unauhthorized'});
 		    }
 		});
-	});
+	})
+	.catch(function(err){
+		console.log(err)
+		res.json(err)
+	})
 });
 
 module.exports = router;
