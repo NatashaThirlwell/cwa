@@ -95,6 +95,11 @@
 					url:'/client/:userId',
 					templateUrl:'site/profile/partial-client.html',
 					controller:'ClientCtrl as ctrl',
+					resolve:{
+						client:function(userSrv,$stateParams){
+							return userSrv.getUser($stateParams.userId)
+						}
+					}
 			})
 
 		// ADMIN PROFILES

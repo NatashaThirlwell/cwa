@@ -7,7 +7,7 @@
 		console.log('login control');
 		var authVm = this;
 
-		AuthCtrl.$inject = ['$http'];
+		// AuthCtrl.$inject = ['$http'];
 
 		//buttons
 		authVm.register_btn = 'Create Account';
@@ -48,10 +48,12 @@
 				.then(function(res){
 					console.log(res);
 					authVm.register_btn = res.data.msg;
-					userSrv.getUser(res.data.user.id)
-						.then(function(){
-							$state.go('user');
-						})
+					// userSrv.getUser(res.data.user.id)
+					// 	.then(function(){
+					// 		$state.go('user');
+					// 	})
+					$uibModalInstance.close();
+					$state.go('client',{userId:res.data.id})
 				})
 			}
 			else{
@@ -79,11 +81,12 @@
 				//success code
 				if(res.status == 200){
 					authVm.auth_btn = "Success";
-					userSrv.getUser(res.data.id);
+					// userSrv.getUser(res.data.id);
 				
 					// toastr.success('Hello user.first_name user.last_name')
+					
+					$state.go('client',{userId:res.data.id})
 					$uibModalInstance.close();
-					$state.go('user');
 
 				}
 			})

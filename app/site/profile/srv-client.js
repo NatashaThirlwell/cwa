@@ -24,6 +24,7 @@
           return $http.get('api/users/'+userId)
             .then(function(res){
               self.user = res.data.user;
+              return res.data.user
             })
         }
 

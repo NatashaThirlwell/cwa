@@ -1,4 +1,4 @@
-// var models 	= require('./../models');
+
 var Clients	= require('./../models/Clients')
 var bcrypt	= require('bcrypt');
 var jwt		= require('jsonwebtoken');
@@ -8,13 +8,13 @@ var router 	= require('express').Router();
 router.post('/register',function(req,res){
 	console.log('Registration Endpoint');
 	var __user = req.body;
+	__user.client_type = 'client';
 	console.log(__user)
 	bcrypt.genSalt(10, function(err, salt) {
 	    bcrypt.hash(__user.password, salt, function(err, hash) {
 	    	if(!err){
 	    		console.log('hashed',hash)
 	    		__user.password = hash;
-		        // models.Users.create(__user)
 		        var newClient = Clients(__user)
 		        newClient.save()
 		        	.then(function(user){
@@ -44,15 +44,15 @@ router.post('/authenticate',function(req,res){
 		    if(result==true){
 		    	user.password = '';
 		    	delete user.password;
-		    	var user_obj = {email:user.email};
-				var token = jwt.sign(user_obj,'brainstationkey');
+		    	var user_obj = {email:user.email,type:user.client_type};
+				var token = jwt.sign(user_obj,'cwaauthkey');
 
 				res.set('authentication',token);
 		    	res.json(user)
 		    }
 		    else{
 		    	res.status(403)
-		    		.json({err:'unauhthorized'});
+		    		.json({err:'unauthorized'});
 		    }
 		});
 	})

@@ -37,13 +37,13 @@ router.get('/:userId',function(req, res) {
 });
 
 // PUT update the user with this id (accessed at PUT http://localhost:8080/api/users/:userId)
+// This endpoint is for users, changing client type is restricted to admin
 router.put('/:userId',function(req, res) {
 	var where = {id:req.params.userId};
 	var __user = req.body;
 	Clients.findOne(where)
 	.then(function(user){
 		user.updateAttributes({
-		    client_type:__user.type,
 		    first_name:__user.first_name,
 		    last_name:__user.last_name,
 		    email:__user.email,
@@ -70,21 +70,27 @@ router.put('/:userId',function(req, res) {
 		res.json(err);
 	})
 });
+
 	
 // DELEte the client with this id (accessed at DELETE http://localhost:8080/api/users/remove/:userId)
 router.delete('/remove/:userId',function(req, res) {
-    var where = {id:req.params.userId};
-    Clients.findOne(where)
-	    .then(function(user){
-			return user.remove()
-		})
-		.then(function(res){
-			res.json(res)
-		})
-		.catch(function(err){
-			console.log(err);
-			res.json(err)
-		})
+	if(req.decoded.type === 'admin')
+	    var where = {id:req.params.userId};
+	    Clients.findOne(where)
+		    .then(function(user){
+				return user.remove()
+			})
+			.then(function(res){
+				res.json(res)
+			})
+			.catch(function(err){
+				console.log(err);
+				res.json(err)
+			})
+		} 
+	else {
+		res.json('Not authorized to perform this action')
+	}
 });
 
 module.exports = router;
