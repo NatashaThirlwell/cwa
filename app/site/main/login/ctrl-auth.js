@@ -34,7 +34,7 @@
 				return;
 			}
 			console.log('registering authVm.email + authVm.password + authVm.repassword')
-			$uibModalInstance.close();
+			// $uibModalInstance.close();
 			//check passwords
 			if(authVm.password == authVm.repassword && authVm.password != ''){
 				var user = {
@@ -52,8 +52,9 @@
 					// 	.then(function(){
 					// 		$state.go('user');
 					// 	})
+					console.log(res)
 					$uibModalInstance.close();
-					$state.go('client',{userId:res.data.id})
+					$state.go('client',{userId:res.data._id})
 				})
 			}
 			else{
@@ -84,11 +85,15 @@
 					// userSrv.getUser(res.data.id);
 				
 					// toastr.success('Hello user.first_name user.last_name')
-					
-					$state.go('client',{userId:res.data.id})
+					console.log(res)
+					// console.log(res.data._id)
+					$state.go('client',{userId:res.data._id})
 					$uibModalInstance.close();
 
 				}
+			},function(err){
+				console.log(err)
+				alert('Invalid username and/or password')
 			})
 		}
 	}

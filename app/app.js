@@ -96,8 +96,16 @@
 					templateUrl:'site/profile/partial-client.html',
 					controller:'ClientCtrl as ctrl',
 					resolve:{
-						client:function(userSrv,$stateParams){
+						client:function(userSrv,$stateParams,$state){
+							console.log($stateParams)
 							return userSrv.getUser($stateParams.userId)
+								.then(function(res){
+									console.log('client',res)
+									return res
+								},function(err){
+									console.log('err');
+									$state.go('home');
+								})
 						}
 					}
 			})

@@ -14,7 +14,7 @@
 		.module('cwaApp')
 		.controller('NavbarCtrl', NavbarCtrl);
 		
-	function NavbarCtrl($uibModal, $scope, $state){
+	function NavbarCtrl($uibModal, $scope, $state,toastr){
 		var navVm = this;
 	
 		
@@ -22,6 +22,9 @@
 		navVm.is_admin 	= false;
 		// navVm.cartCount; 
 		// cartTotal();
+		if(localStorage.authToken){
+			navVm.logged = true;
+		}
 
 	//States
 		navVm.goHome 	= goHome;
@@ -43,9 +46,9 @@
 		navVm.openBook 	= openBook;
 
 	// Login
-		// navVm.openLogin = openLogin;
+		navVm.openLogin = openLogin;
 	// Nam
-		// navVm.logout    = logout;
+		navVm.logout    = logout;
 
 
 	//watch id user or admin is logged in
@@ -100,27 +103,27 @@
 	  		console.log('Book Modal');
 	  		$uibModal.open({
 	  			animation: true,
-          		templateUrl: 'site/partials/book.html',
+          		templateUrl: 'site/main/book/partial-book.html',
           		controller: 'BookCtrl as ctrl'
 	  		});
 	  	}
 
 	// Login
-		// function openLogin(){
-	 //  		console.log('Login Modal');
-	 //  		$uibModal.open({
-	 //  			animation: true,
-  //         		templateUrl: 'site/partials/login/auth.html',
-  //         		controller: 'AuthCtrl as ctrl'
-	 //  		});
-	 //  	}
+		function openLogin(){
+	  		console.log('Login Modal');
+	  		$uibModal.open({
+	  			animation: true,
+          		templateUrl: 'site/main/login/partial-auth.html',
+          		controller: 'AuthCtrl as ctrl'
+	  		});
+	  	}
 
 	//Logout
-		// function logout(){
-	 //    	localStorage.removeItem('authToken');
-	 //    	toastr.success('Logged out succesfully.')
-	 //    	$state.go('home');
-  //   	}
+		function logout(){
+	    	localStorage.removeItem('authToken');
+	    	toastr.success('Logged out succesfully.')
+	    	$state.go('home');
+    	}
 
 	}
 

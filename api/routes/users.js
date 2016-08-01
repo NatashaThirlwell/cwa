@@ -4,11 +4,11 @@ var router 	= require('express').Router();
 
 //-----------------------------------------------
 // middleware to use for all requests
-router.use(function(req, res, next) {
-    // do logging
-    console.log('Something is happening.');
-    next(); // make sure we go to the next routes and don't stop here
-});
+// router.use(function(req, res, next) {
+//     // do logging
+//     console.log('Something is happening.');
+//     next(); // make sure we go to the next routes and don't stop here
+// });
 
 // GET all users (accessed at GET http://localhost:8080/api/users)
 router.get('/',function(req,res){
@@ -26,20 +26,33 @@ router.get('/',function(req,res){
 // GET the user with that id (accessed at GET http://localhost:8080/api/users/:userId)
 router.get('/:userId',function(req, res) {
 	console.log('Getting user with ID: '+req.params.userId);
-	var where = {id:req.params.userId};
-    Clients.find(where)
+	var where = {_id:req.params.userId};
+    Clients.findOne(where)
     .then(function(user){
-		console.log(user.email);
-		res.json({
-			user:user
-		});
-	});
+    	console.log('user',user)
+    	if(user == null){
+    		res.status(403)
+    			.json('User not found.')
+    	}
+    	else{
+    		console.log(user)
+			// console.log(user.email);
+			res.json({
+				user:user
+			});
+		}
+	})
+	.catch(function(err){
+		console.log(err);
+		res.status(403)
+			.json('User not found.')
+	})
 });
 
 // PUT update the user with this id (accessed at PUT http://localhost:8080/api/users/:userId)
 // This endpoint is for users, changing client type is restricted to admin
 router.put('/:userId',function(req, res) {
-	var where = {id:req.params.userId};
+	var where = {_id:req.params.userId};
 	var __user = req.body;
 	Clients.findOne(where)
 	.then(function(user){
@@ -74,8 +87,8 @@ router.put('/:userId',function(req, res) {
 	
 // DELEte the client with this id (accessed at DELETE http://localhost:8080/api/users/remove/:userId)
 router.delete('/remove/:userId',function(req, res) {
-	if(req.decoded.type === 'admin')
-	    var where = {id:req.params.userId};
+	if(req.decoded.type === 'admin'){
+	    var where = {_id:req.params.userId};
 	    Clients.findOne(where)
 		    .then(function(user){
 				return user.remove()
@@ -87,7 +100,7 @@ router.delete('/remove/:userId',function(req, res) {
 				console.log(err);
 				res.json(err)
 			})
-		} 
+	} 
 	else {
 		res.json('Not authorized to perform this action')
 	}

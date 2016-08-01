@@ -72,19 +72,19 @@
                 <a ng-click="ctrl.openBook()" ng-hide='ctrl.logged' id="login" class="w-green-btn btn default-btn">BOOK OR REGISTER</a>
 
                 <!-- Login -->
-                <!-- <a ng-click="ctrl.openLogin()" ng-hide='ctrl.logged' id="login" class="nav_login w-green-btn btn default-btn">LOGIN</a> -->
+                <a ng-click="ctrl.openLogin()" ng-hide='ctrl.logged' id="login" class="nav_login w-green-btn btn default-btn">LOGIN</a>
 
                  <!-- Name -->
-              <!--   <li id="profile-name" class="nav_profile-name">
-                    <a ng-show="ctrl.logged" class="blue-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NAME<div class="green-line blue-line"></div></a>
-                    <ul class="blue-font dropdown-menu"> -->
-                        <!-- <li><a href="#" class="blue-font">Home</a></li>
-                        <li role="separator" class="divider"></li> -->
-                       <!--  <li><a href="#" class="blue-font">Articles</a></li>
+                <li ng-show="ctrl.logged" style="min-width:150px;" id="profile-name" class="nav_profile-name">
+                    <a class="blue-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NAME<div class="green-line blue-line"></div></a>
+                    <ul class="blue-font dropdown-menu">
+                        <li><a href="#" class="blue-font">Home</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" class="blue-font">Articles</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#" class="blue-font">Book Service</a></li>
-                        <li role="separator" class="divider"></li> -->
-                       <!--  <li><a ng-click="ctrl.logout" class="blue-font">Logout</a></li> -->
+                        <li role="separator" class="divider"></li>
+                        <li><a ng-click="ctrl.logout()" class="blue-font">Logout</a></li>
                     </ul>
                 </li> <!-- end name -->
             </ul>
