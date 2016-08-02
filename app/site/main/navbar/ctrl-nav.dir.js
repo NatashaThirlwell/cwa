@@ -24,8 +24,10 @@
 		// cartTotal();
 		if(localStorage.authToken){
 			navVm.logged = true;
+			navVm.username = localStorage.loginEmail;
 		}
 
+		navVm.goTo		= goTo;
 	//States
 		navVm.goHome 	= goHome;
 	//About
@@ -55,6 +57,14 @@
 		// if(localStorage.authToken){
 		// 	navVm.logged = true;
 		// }
+
+		function goTo(state){
+			if(state == 'client'){
+				$state.go('client',{userId:localStorage.loginId})
+			}else{
+				$state.go(state);
+			}
+		}
 
 	//Home
 		function goHome(){
@@ -121,7 +131,10 @@
 	//Logout
 		function logout(){
 	    	localStorage.removeItem('authToken');
+	    	localStorage.removeItem('loginEmail');
+	    	localStorage.removeItem('loginId');
 	    	toastr.success('Logged out succesfully.')
+	    	navVm.logged = false;
 	    	$state.go('home');
     	}
 

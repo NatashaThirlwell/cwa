@@ -17,7 +17,7 @@ router.get('/',function(req,res){
 
 // GET the seminar with given id (accessed at GET http://localhost:8080/api/seminars/:id)
 router.get('/:id',function(req, res) {
-	var where = {id:req.params.id};
+	var where = {_id:req.params.id};
     Seminar.find(where)
     .then(function(seminar){
 		res.json({
@@ -34,11 +34,14 @@ router.get('/:id',function(req, res) {
 
 //PUT add a user to a seminar (accessed at PUT  http://localhost:8080/api/seminars/register/:id)
 router.put('/register/:id',function(req,res){
-	var where = {id:req.params.id};
+	var where = {_id:req.params.id};
 	var __client = req.body.client;
 	if(req.body.code){
-		
+		//check for promo code supplied by user
+		//should happen before payment processing
 	}
+	//need to implement payment (stripe?)
+	//once payment is processed, add user to seminar
 })
 
 
@@ -69,7 +72,7 @@ router.post('/',function(req,res){
 // PUT update the seminar with this id (accessed at PUT http://localhost:8080/api/seminars/:id)
 router.put('/:id',function(req, res) {
 	if(req.decoded.type == 'admin'){
-		var where = {id:req.params.id};
+		var where = {_id:req.params.id};
 		var __seminar = req.body;
 		var now = new Date();
 		Seminar.findOne(where)
@@ -106,7 +109,7 @@ router.put('/:id',function(req, res) {
 // Delete the seminar with this id (accessed at DELETE http://localhost:8080/api/seminars/remove/:id)
 router.delete('/remove/:id',function(req, res) {
 	if(req.decoded.type == 'admin'){
-	    var where = {id:req.params.id};
+	    var where = {_id:req.params.id};
 	    Seminar.findOne(where)
 		    .then(function(seminar){
 				return seminar.remove()

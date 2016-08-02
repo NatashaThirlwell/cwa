@@ -46,11 +46,11 @@
                 <li id="events" class="nav_events">
                     <a class="green-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SEMINARS<div class="green-line"></div></a>
                     <ul class="dropdown-menu">
-                        <li><a ng-click="ctrl.goAllSem()" class="green-font lighten">CWA Seminars</a></li>
+                        <li><a ng-click="ctrl.goTo('all')" class="green-font lighten">CWA Seminars</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a ng-click="ctrl.goCpapSem()" class="green-font lighten">CPAP</a></li>
+                        <li><a ng-click="ctrl.goTo('cpap')" class="green-font lighten">CPAP</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a ng-click="ctrl.goLaserSem()" class="green-font lighten">LASER</a></li> 
+                        <li><a ng-click="ctrl.goTo('laser-sem')" class="green-font lighten">LASER</a></li> 
                     </ul>
                 </li>
             </ul>
@@ -76,9 +76,9 @@
 
                  <!-- Name -->
                 <li ng-show="ctrl.logged" style="min-width:150px;" id="profile-name" class="nav_profile-name">
-                    <a class="blue-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NAME<div class="green-line blue-line"></div></a>
+                    <a class="blue-font dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ctrl.username}}<div class="green-line blue-line"></div></a>
                     <ul class="blue-font dropdown-menu">
-                        <li><a href="#" class="blue-font">Home</a></li>
+                        <li><a ng-click="ctrl.goTo('client')" class="blue-font">Profile</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#" class="blue-font">Articles</a></li>
                         <li role="separator" class="divider"></li>

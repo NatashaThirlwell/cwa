@@ -29,7 +29,7 @@
         }
 
         function getUsers(){
-          return $http.get('api/users',{})
+          return $http.get('api/users')
           .then(function(res){
             //success callback
             console.log(res);

@@ -52,6 +52,12 @@
   	</div><!-- /.container-fluid -->
 </nav>
 
+<ul>
+	<li ng-repeat="seminar in ctrl.seminars">
+		{{seminar.title}},{{seminar.date}}
+	</li>
+</ul>
+
 <!-- Stay Connected -->
 <connected></connected>
 

@@ -76,7 +76,8 @@
 			$http.post('/api/auth/authenticate',user)
 			.then(function(res){
 				console.log(res);
-				localStorage.loginEmail = authVm.email;
+				localStorage.loginEmail = res.data.email;
+				localStorage.loginId = res.data._id
 				authVm.auth_btn = res.data.msg;
 				//success callback
 				//success code
