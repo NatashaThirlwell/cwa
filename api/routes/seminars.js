@@ -9,8 +9,13 @@ router.get('/',function(req,res){
 	Seminar.find({})
 	.then(function(seminars){
 		console.log(seminars);
+		allseminars = seminars.map(function(seminar){
+			seminar.codes = [];
+			seminar.attendees = [];
+			return seminar;
+		})
 		res.json({
-			seminars:seminars
+			seminars:allseminars
 		});
 	});
 });
@@ -20,6 +25,8 @@ router.get('/:id',function(req, res) {
 	var where = {_id:req.params.id};
     Seminar.find(where)
     .then(function(seminar){
+    	seminar.codes = [];
+    	seminar.attendees = [];
 		res.json({
 			seminar:seminar
 		});
@@ -29,23 +36,71 @@ router.get('/:id',function(req, res) {
 		res.json(err)
 	})
 });
-//END PUBLIC ROUTES
 
+//POST route for validating seminar promo codes
+router.post('/validate/:id',function(req,res){
+	/*Pseudo code for code process:
+	Users get seminar with no code information
+	User sends their promo code to this endpoint
+		if code matches, send back success match as well as corresponding code discount
+		else send error msg
+	User gets response, displayed price gets changed locally and code is saved client-side
+	When registering, send code along with seminar info
+	Revalidate code and verify price before charging
+	*/
+	var code = req.body.code;
+	var where = {_id:req.params.id};
+    Seminar.find(where)
+    .then(function(seminar){
+		var result = testCode(seminar,code)
+		if(result === 'invalid'){
+			res.send('Code is invalid')
+		}
+		else{
+			res.send({
+				msg:'Code valid',
+				action:result
+			})
+		}
+	})
+	.catch(function(err){
+		console.log(err)
+		res.json(err)
+	})
+})
 
 //PUT add a user to a seminar (accessed at PUT  http://localhost:8080/api/seminars/register/:id)
 router.put('/register/:id',function(req,res){
 	var where = {_id:req.params.id};
 	var __client = req.body.client;
-	if(req.body.code){
-		//check for promo code supplied by user
-		//should happen before payment processing
-	}
-	//need to implement payment (stripe?)
-	//once payment is processed, add user to seminar
-})
+	Seminar.find(where)
+	.then(function(seminar){
+		if(req.body.code){
+			var result = testCode(seminar,req.body.code)
+			//check for promo code supplied by user
+			//should happen before payment processing
+		}
+		//need to implement payment (stripe?)
+		//once payment is processed, add user to seminar
+	})
+		
+});
+
+//END PUBLIC ROUTES
 
 
 // ADMIN ROUTES
+// GET all seminars (admin version, includes attendee list and codes)
+router.get('/',function(req,res){
+	Seminar.find({})
+	.then(function(seminars){
+		console.log(seminars);
+		res.json({
+			seminars:seminars
+		});
+	});
+});
+
 // POST create a new seminar (accessed at POST http://localhost:8080/api/seminars)
 router.post('/',function(req,res){
 	if(req.decoded.type == 'admin'){
@@ -133,25 +188,25 @@ module.exports = router;
 
 
 //Code for verifying promo codes, need to figure out where in process to handle payment info.
-// function testCode(id,code){
-// 	var valid = false;
-// 	var action;
-// 	var __event = self.events[id]
-// 	console.log(code)
-// 	for(var i = 0;i < __event.codes.length; i++){
-// 		if(code === __event.codes[i].code){
-// 			valid = true;
-// 			action = __event.codes[i].action;
-// 		}
-// 	}
+function testCode(event,code){
+	var valid = false;
+	var action;
+	var __event = event;
+	console.log(code)
+	for(var i = 0;i < __event.codes.length; i++){
+		if(code === __event.codes[i].code){
+			valid = true;
+			action = __event.codes[i].action;
+		}
+	}
 
-// 	if(valid === false){
-// 		console.log('invalid')
-// 		return "invalid";
-// 	} else {
-// 		return action;
-// 	}
-// }
+	if(valid === false){
+		console.log('invalid')
+		return "invalid";
+	} else {
+		return action;
+	}
+}
 
 // function register(id,name,code){
 // 	if(code){

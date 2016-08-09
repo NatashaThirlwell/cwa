@@ -1,0 +1,10 @@
+<h3>Seminars</h3>
+<ul>
+	<li ng-repeat="seminar in ctrl.seminars">
+		{{seminar.name}}
+	</li>
+</ul>
+
+<div ng-show="ctrl.seminars.length == 0">
+	<h3>There are currently no seminars.</h3>
+</div>

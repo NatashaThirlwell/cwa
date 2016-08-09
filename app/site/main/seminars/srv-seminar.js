@@ -13,6 +13,7 @@
         self.addSeminar     = addSeminar;
         self.updateSeminar  = updateSeminar;
         self.register       = register;
+        self.getAdminSeminars = getAdminSeminars;
 
 
         function getSeminars(){
@@ -64,6 +65,18 @@
                 })
                 .catch(function(err){
                     console.log(err);
+                })
+        }
+
+        function getAdminSeminars(){
+            return $http.get('api/seminars/full')
+                .then(function(res){
+                    console.log('all seminars',res.data)
+                    self.seminars = res.data;
+                    return res.data
+                })
+                .catch(function(err){
+                    console.log(err)
                 })
         }
 

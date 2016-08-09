@@ -17,7 +17,10 @@ var authentication = require("./middleware/auth");
 var auth_routes = require('./routes/auth');
 var user_routes = require('./routes/users');
 var seminar_routes = require('./routes/seminars')
+var init_routes = require('./routes/init')
 
+
+app.use('/api/init',init_routes);
 app.use('/api/auth',auth_routes);
 app.use('/api/users',user_routes,authentication);
 app.use('/api/seminars',seminar_routes);
@@ -27,3 +30,5 @@ app.listen(port,function(){
 	console.log('Listening on http://localhost:%s',port);
 	console.log('Stop Server With CTRL + C');
 });
+
+

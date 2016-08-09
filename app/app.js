@@ -110,6 +110,9 @@
 								return userSrv.getUser($stateParams.userId)
 									.then(function(res){
 										console.log('client',res)
+										if(res.client_type == 'admin'){
+											$state.go('admin',{userId:res._id})
+										}
 										return res
 									},function(err){
 										console.log('err');
@@ -122,10 +125,65 @@
 
 		// ADMIN PROFILES
 			.state('admin',{
-					url:'/client',
-					templateUrl:'site/partials/users/user.html',
-					controller:'UserCtrl as ctrl',
+					url:'/admin/:userId',
+					templateUrl:'site/profile/partial-admin.html',
+					controller:'AdminCtrl as ctrl',
+					resolve:{
+						admin:function(userSrv,$stateParams,$state){
+							console.log($stateParams)
+							// if($stateParams.userId == ""){
+							// 	if(localStorage.loginId){
+							// 		$state.go('client',{userId:localStorage.loginId})
+							// 	}
+							// 	else{
+							// 		$state.go('home');
+							// 	}
+							// }
+							// else{
+								return userSrv.getUser($stateParams.userId)
+									.then(function(res){
+										console.log('client',res)
+										if(res.client_type != 'admin'){
+											$state.go('client',{userId:res._id})
+										}
+										return res;
+									},function(err){
+										console.log('err');
+										$state.go('home');
+									})
+							// }
+						},
+						userlist:function(userSrv){
+							return userSrv.getUsers()
+						},
+						seminars:function(seminarSrv){
+							return seminarSrv.getAdminSeminars()
+						}
+					}
 			})
+			.state('admin.users',{
+				url:'/users',
+				templateUrl:'site/profile/partial-admin-users.html',
+				// controller:'AdminCtrl as ctrl',
+			})
+			.state('admin.seminars',{
+				url:'/seminars',
+				templateUrl:'site/profile/partial-admin-seminars.html',
+				// controller:'AdminCtrl as ctrl'
+			})
+			.state('admin.editUser',{
+				user:'/editUser/:userId',
+				templateUrl:'site/profile/partial-admin-editUser.html',
+			})
+			.state('admin.addSeminar',{
+				user:'/addSeminar',
+				templateUrl:'site/profile/partial-admin-addSeminar.html',
+			})
+			.state('admin.editSeminar',{
+				user:'/editSeminar/:semId',
+				templateUrl:'site/profile/partial-admin-editSeminar.html',
+			})
+
 
 
 			$httpProvider.interceptors.push(function(){

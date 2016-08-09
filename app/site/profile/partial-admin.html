@@ -1,0 +1,66 @@
+<navbar></navbar>
+
+<!-- User Jumbotron -->
+<section class="jumbotron">
+	<div class="container">
+		<div class="centered">
+		<img class="sleep-jumbo" src="assets/img/therapy/sleep-jumbo.svg">
+		<h1>{{ctrl.user.first_name}} {{ctrl.user.last_name}}</h1>
+		<h3>Admin Page</h3>
+		</div>
+		<!-- <button ng-click="ctrl.openLogin()" class="green-btn btn default-btn">Book an appointment</button> -->
+	</div>
+</section>
+
+<!-- Second Nav -->
+<!-- <nav id="navbar" class="nav-2 navbar navbar-default navbar-fixed-top">
+  	<div class="nav-2_swap container-fluid">
+    	<!Brand and toggle get grouped for better mobile display -->
+    	<!-- <div class="navbar-header">
+	      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		</div>
+	    Collect the nav links, forms, and other content for toggling
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav navbar-right nav-2_main-info"> -->
+		       <!-- Home -->
+		       <!--  <li><a ng-class="{'active':ctrl.page == 1}" ui-sref="user.home" class="swap-info blue-font">	Home
+		        	<div class="green-line"></div>
+		        </a></li>
+				<li><a ng-class="{'active':ctrl.page == 2}" ui-sref="user.articles">Articles</a></li>
+				<li><a ng-class="{'active':ctrl.page == 3}" ui-sref="user.book"></a></li>
+		       <li>
+
+		    </ul>
+	    </div>
+  	</div>
+</nav>  -->
+
+<!-- 
+<h1>Appointments</h1>
+<div class="user-content top-content" ng-show="ctrl.is_appointments">
+    <form>
+	    <div class="form-container">  	        
+			<input ng-model='ctrl.appointmentSearch' type="text" class="form-control" placeholder="Refine search" >
+			<a class="search-btn" id="adminbutt"><img src="assets/img/icon-search@2x.png"></a>	
+		</div>
+	</form>
+</div>	 -->
+<button class="btn" ng-click="ctrl.goTo('admin.users')">Users</button>
+<button class="btn" ng-click="ctrl.goTo('admin.seminars')">Seminars</button>
+<button class="btn" ng-click="ctrl.goTo('admin.addSeminar')">Add Seminar</button>
+<div ui-view>
+</div>
+
+<!-- <ul>
+	<li ng-repeat="user in ctrl.userlist">
+		<h3>{{user.email}}</h3>
+		<p>{{user.first_name}} {{user.last_name}}</p>
+	</li>
+</ul> -->
+
+
+</div>

@@ -33,8 +33,8 @@
           .then(function(res){
             //success callback
             console.log(res);
-            self.users = res.data.users;
-            return res.data.users;
+            self.users = res.data.clients;
+            return res.data.clients;
           },function(res){
             //error callback
             console.log(res);

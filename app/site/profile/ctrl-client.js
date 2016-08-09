@@ -7,7 +7,7 @@
         var userVm = this;
         userVm.state = $state;
 
-        // load the specidic user from api/users/:useId using the id from the route params
+        // load the specific user from api/users/:useId using the id from the route params
 
         userVm.user = client;
 
