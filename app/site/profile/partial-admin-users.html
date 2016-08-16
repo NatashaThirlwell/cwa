@@ -5,5 +5,6 @@
 		<h3>{{user.email}}</h3>
 		<p>{{user.first_name}} {{user.last_name}}</p>
 		<b>{{user.client_type}}</b>
+		<button ng-click="ctrl.goTo('admin.editUser',user._id)">Edit user</button>
 	</li>
 </ul>

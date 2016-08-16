@@ -1,5 +1,6 @@
 var router = require('express').Router();
 var Clients = require('./../models/Clients');
+var Seminar = require('./../models/Seminar');
 var bcrypt	= require('bcrypt');
 var jwt		= require('jsonwebtoken');
 
@@ -9,8 +10,8 @@ router.get('/',function(req,res){
 	var __user = {
 		email:'admin@cwa.com',
 		password:'admin',
-		first_name:'Ryan',
-		last_name:'Chick',
+		first_name:'root',
+		last_name:'admin',
 		client_type:'admin'
 	}
 	console.log(__user)
@@ -33,6 +34,36 @@ router.get('/',function(req,res){
 	        }
 	    });
 	});
+})
+
+router.get('/addSeminar',function(req,res){
+	var __seminar = {
+		title:"Test Seminar",
+		type:"Seminar",
+		category:"Seminar",
+		date:"August 1 2016",
+		location:"CWA",
+		practitioner:"Dr. Test",
+		description:"Test Seminar",
+		price:20.00,
+		capacity:50,
+		duration:"2 hours",
+		codes:[{code:"100%OFF",discount:1,uses:20}],
+		attendees:[],
+		created_at:new Date(),
+		updated_at:new Date()
+	}
+
+	var newSeminar = Seminar(__seminar);
+	newSeminar.save()
+		.then(function(seminar){
+			console.log(seminar)
+			res.send(seminar);
+		})
+		.catch(function(err){
+			console.log(err)
+			res.send(err)
+		})
 })
 
 module.exports = router;

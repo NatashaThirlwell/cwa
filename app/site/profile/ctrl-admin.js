@@ -20,8 +20,13 @@
 
         adminVm.goTo = goTo;
 
-        function goTo(state){
-            $state.go(state)
+        function goTo(state,params){
+            if(params){
+                $state.go(state,{id:params})
+            }
+            else {
+                $state.go(state)
+            }
         }
 	}
 

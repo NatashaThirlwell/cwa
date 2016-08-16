@@ -96,13 +96,15 @@
 					templateUrl:'site/profile/partial-client.html',
 					controller:'ClientCtrl as ctrl',
 					resolve:{
-						client:function(userSrv,$stateParams,$state){
+						client:function(userSrv,$stateParams,$state,$q){
 							console.log($stateParams)
 							if($stateParams.userId == ""){
 								if(localStorage.loginId){
+									console.log('going to client')
 									$state.go('client',{userId:localStorage.loginId})
 								}
 								else{
+									console.log('going home')
 									$state.go('home');
 								}
 							}
@@ -111,7 +113,10 @@
 									.then(function(res){
 										console.log('client',res)
 										if(res.client_type == 'admin'){
-											$state.go('admin',{userId:res._id})
+											setTimeout(function(){
+												$state.go('admin',{userId:res._id})
+											},0)
+											return $q.reject();
 										}
 										return res
 									},function(err){
@@ -172,7 +177,7 @@
 				// controller:'AdminCtrl as ctrl'
 			})
 			.state('admin.editUser',{
-				user:'/editUser/:userId',
+				user:'/editUser/:id',
 				templateUrl:'site/profile/partial-admin-editUser.html',
 			})
 			.state('admin.addSeminar',{
@@ -180,7 +185,7 @@
 				templateUrl:'site/profile/partial-admin-addSeminar.html',
 			})
 			.state('admin.editSeminar',{
-				user:'/editSeminar/:semId',
+				user:'/editSeminar/:id',
 				templateUrl:'site/profile/partial-admin-editSeminar.html',
 			})
 

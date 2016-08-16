@@ -29,6 +29,7 @@
         }
 
         function getSeminar(id){
+            console.log('getseminar w/:' + id)
             return $http.get('api/seminars/'+id)
                 .then(function(res){
                     console.log('getting one seminar',res);

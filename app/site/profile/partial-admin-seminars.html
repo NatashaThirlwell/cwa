@@ -1,7 +1,12 @@
 <h3>Seminars</h3>
 <ul>
 	<li ng-repeat="seminar in ctrl.seminars">
-		{{seminar.name}}
+		<p>Title: {{seminar.title}}</p>
+
+		<p>Date: {{seminar.date}}</p>
+
+		<p>Price: {{seminar.price}}</p>
+		<button ng-click="ctrl.goTo('admin.editSeminar',seminar._id)">Edit Seminar</button>
 	</li>
 </ul>
 

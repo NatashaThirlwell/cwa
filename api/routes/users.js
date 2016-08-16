@@ -1,6 +1,7 @@
 var Clients	= require('./../models/Clients')
 // var models 	= require('./../models');
 var router 	= require('express').Router();
+var mongoose = require('mongoose');
 
 //-----------------------------------------------
 // middleware to use for all requests
@@ -27,7 +28,9 @@ router.get('/',function(req,res){
 router.get('/:userId',function(req, res) {
 	console.log('Getting user with ID: '+req.params.userId);
 	var where = {_id:req.params.userId};
-    Clients.findOne(where)
+	console.log(mongoose.Types.ObjectId.isValid(req.params.userID));
+	console.log(where)
+    Clients.findById(where)
     .then(function(user){
     	console.log('user',user)
     	if(user == null){

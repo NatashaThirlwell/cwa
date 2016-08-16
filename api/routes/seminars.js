@@ -3,6 +3,19 @@ var Seminar	= require('./../models/Seminar')
 var router 	= require('express').Router();
 //-----------------------------------------------
 
+
+// GET all seminars (admin version, includes attendee list and codes)
+router.get('/full',function(req,res){
+	console.log('getting all seminars')
+	Seminar.find({})
+	.then(function(seminars){
+		console.log(seminars);
+		res.json({
+			seminars:seminars
+		});
+	});
+});
+
 //PUBLIC ROUTES - SHOULDNT NEED TO BE LOGGED IN FOR THIS
 // GET all seminars (accessed at GET http://localhost:8080/api/seminars)
 router.get('/',function(req,res){
@@ -90,16 +103,7 @@ router.put('/register/:id',function(req,res){
 
 
 // ADMIN ROUTES
-// GET all seminars (admin version, includes attendee list and codes)
-router.get('/',function(req,res){
-	Seminar.find({})
-	.then(function(seminars){
-		console.log(seminars);
-		res.json({
-			seminars:seminars
-		});
-	});
-});
+
 
 // POST create a new seminar (accessed at POST http://localhost:8080/api/seminars)
 router.post('/',function(req,res){
