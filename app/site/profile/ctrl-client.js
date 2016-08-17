@@ -3,17 +3,36 @@
     .module('cwaApp')
     .controller('ClientCtrl',ClientCtrl)
 
-    function ClientCtrl($scope, $state, client, userSrv){
+    function ClientCtrl($scope, $state, client, userSrv,seminars,seminarSrv){
         var userVm = this;
-        userVm.state = $state;
+        if($state == 'client'){
+            $state.go('client.home')
+        }
 
-        // load the specific user from api/users/:useId using the id from the route params
 
         userVm.user = client;
-
-
-		
 		console.log(userVm.user);
+        userVm.seminars = seminars;
+
+        if($stateParams.seminarId){
+            seminarSrv.getSeminar($stateParams.seminarId)
+                .then(function(res){
+                    console.log(res)
+                    userVm.seminar = res;
+                })   
+        }
+
+        //function bindings
+        userVm.goTo = goTo;
+
+        function goTo(state,params){
+            if(params){
+                $state.go(state,{id:params})
+            }
+            else {
+                $state.go(state)
+            }
+        }
 	}
 
 

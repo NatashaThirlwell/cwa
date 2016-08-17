@@ -92,40 +92,56 @@
 
 		// USER PROFILES
 			.state('client',{
-					url:'/client/:userId',
-					templateUrl:'site/profile/partial-client.html',
-					controller:'ClientCtrl as ctrl',
-					resolve:{
-						client:function(userSrv,$stateParams,$state,$q){
-							console.log($stateParams)
-							if($stateParams.userId == ""){
-								if(localStorage.loginId){
-									console.log('going to client')
-									$state.go('client',{userId:localStorage.loginId})
-								}
-								else{
-									console.log('going home')
-									$state.go('home');
-								}
+				url:'/client/:userId',
+				templateUrl:'site/profile/partial-client.html',
+				controller:'ClientCtrl as ctrl',
+				resolve:{
+					//this resolve adds the user
+					client:function(userSrv,$stateParams,$state,$q){
+						console.log($stateParams)
+						if($stateParams.userId == ""){
+							if(localStorage.loginId){
+								console.log('going to client')
+								$state.go('client.home',{userId:localStorage.loginId})
 							}
 							else{
-								return userSrv.getUser($stateParams.userId)
-									.then(function(res){
-										console.log('client',res)
-										if(res.client_type == 'admin'){
-											setTimeout(function(){
-												$state.go('admin',{userId:res._id})
-											},0)
-											return $q.reject();
-										}
-										return res
-									},function(err){
-										console.log('err');
-										$state.go('home');
-									})
+								console.log('going home')
+								$state.go('home');
 							}
 						}
+						else{
+							return userSrv.getUser($stateParams.userId)
+								.then(function(res){
+									console.log('client',res)
+									if(res.client_type == 'admin'){
+										setTimeout(function(){
+											$state.go('admin',{userId:res._id})
+										},0)
+										return $q.reject();
+									}
+									return res
+								},function(err){
+									console.log('err');
+									$state.go('home');
+								})
+						}
+					},
+					seminars:function(seminarSrv){
+						return seminarSrv.getSeminars()
 					}
+				}
+			})
+			.state('client.home',{
+				url:'/home',
+				templateUrl:'site/profile/partial-client-home.html'
+			})
+			.state('client.articles',{
+				url:'/articles',
+				templateUrl:'site/profile/partial-client-articles.html'
+			})
+			.state('client.register',{
+				url:'/register/:seminarId',
+				templateUrl:'site/profile/partial-client-register.html'
 			})
 
 		// ADMIN PROFILES

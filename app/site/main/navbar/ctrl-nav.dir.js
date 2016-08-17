@@ -60,7 +60,7 @@
 
 		function goTo(state){
 			if(state == 'client'){
-				$state.go('client',{userId:localStorage.loginId})
+				$state.go('client.home',{userId:localStorage.loginId})
 			}else{
 				$state.go(state);
 			}

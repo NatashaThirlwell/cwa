@@ -8,7 +8,6 @@
 		<h1>{{ctrl.user.first_name}} {{ctrl.user.last_name}}</h1>
 		<h3>View, book an appointment or register for a seminar.</h3>
 		</div>
-		<button ng-click="ctrl.openLogin()" class="green-btn btn default-btn">Book an appointment</button>
 	</div>
 </section>
 
@@ -38,41 +37,9 @@
 	    </div>
   	</div>
 </nav>  -->
+<button class="btn" ng-click="ctrl.goTo('client.home')">Home</button>
+<button class="btn" ng-click="ctrl.goTo('client.articles')">Articles</button>
 
-<h1>Appointments</h1>
-<div class="user-content top-content" ng-show="ctrl.is_appointments">
-    <form>
-	    <div class="form-container">  	        
-			<input ng-model='ctrl.appointmentSearch' type="text" class="form-control" placeholder="Refine search" >
-			<a class="search-btn" id="adminbutt"><img src="assets/img/icon-search@2x.png"></a>	
-		</div>
-	</form>
-</div>	
 
-<div ng-hide="ctrl.is_products">
-	<p>
-		You have no products
-	</p>
-</div>
-
-<div ng-show="ctrl.is_products">
-	<table class="products-list table table-hover">
-		<tr>
-			<th>Category</th>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Quantity</th>
-			<th>&nbsp;</th>
-		</tr>
-		<tr ng-repeat="product in ctrl.products | filter: ctrl.productSearch">
-			<td>{{product.category | titleCaseFilter}}</td>
-			<td>{{product.name}}</td>
-			<td>{{product.price | currency}}</td>
-			<td>{{product.quantity}}</td>
-			<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
-		</tr>
-	</table>
-
-<button class="btn btn-danger" ng-click='ctrl.reloadProducts()' id="reloadbutt">Reload Products</button>
-
+<div ui-view>
 </div>

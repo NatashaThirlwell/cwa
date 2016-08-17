@@ -1,0 +1,30 @@
+<h1>Appointments</h1>
+<div class="user-content top-content" ng-show="ctrl.is_appointments">
+    <form>
+	    <div class="form-container">  	        
+			<input ng-model='ctrl.appointmentSearch' type="text" class="form-control" placeholder="Refine search" >
+			<a class="search-btn" id="adminbutt"><img src="assets/img/icon-search@2x.png"></a>	
+		</div>
+	</form>
+</div>	
+
+
+<h1>Events and Workshops</h1>
+<ul>
+	<li ng-repeat="seminar in ctrl.seminars">
+		<p>Title: {{seminar.title}}</p>
+
+		<p>Date: {{seminar.date}}</p>
+
+		<p>Price: {{seminar.price}}</p>
+		<button ng-click="ctrl.goTo('client.register',seminar._id)">Join Seminar</button>
+	</li>
+</ul>
+
+<div ng-show="ctrl.seminars.length == 0">
+	<h3>There are currently no seminars.</h3>
+</div>
+
+
+
+<h1>Calendar</h1>
