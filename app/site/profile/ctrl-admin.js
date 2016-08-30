@@ -16,7 +16,7 @@
 		
 		console.log(adminVm.user);
         console.log(adminVm.userlist);
-        console.log(adminVm.seminars)
+        console.log(adminVm.seminars);
 
         adminVm.goTo = goTo;
 

@@ -34,6 +34,7 @@ var clientSchema = new Schema({
 	todo_list:[{todo:String,done:Boolean}],
 	schedule:[{eventId:String}],
 	referrer:String,
+	profile_pic:String,
 	created_at:Date,
 	updated_at:Date
 });

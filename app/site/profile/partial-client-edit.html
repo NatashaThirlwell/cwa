@@ -1,0 +1,18 @@
+<h1>Edit Profile</h1>
+<form ng-submit="ctrl.uploadFile()" enctype="multipart/form-data">
+	<input ng-model="ctrl.file" type="file" name="file">
+	<button type="submit">Upload profile picture</button>
+</form>
+
+<form ng-submit="ctrl.updateUser()">
+	<label>Name:</label>
+	<input type="text" name="" ng-model="ctrl.user.first_name" />
+	<input type="text" name="" ng-model="ctrl.user.last_name" />
+	<label>Address:</label>
+	<input type="" name="" ng-model="ctrl.user.address" />
+	<label>Phone Number:</label>
+	<input type="" name="" ng-model="ctrl.user.phone" />
+
+	<button type="submit">Update User Information</button>
+
+</form>

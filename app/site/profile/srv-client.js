@@ -15,6 +15,7 @@
         self.getUsers = getUsers;
         self.addUser  = addUser;
         self.updateUser = updateUser;
+        self.editUser = editUser;
         self.updateUserList = updateUserList;
         self.removeUser = removeUser;
         self.deleteUser = deleteUser;
@@ -63,6 +64,18 @@
             //product was updated successfully
             self.updateUserList(user,userId);
             $state.go('admin.dash');
+          }
+        })
+      }
+
+      function editUser(user,userId){
+        api.request('/users/'+userId,user,'PUT')
+        .then(function(res){
+          console.log(res);
+          if(res.status === 200){
+            //product was updated successfully
+            self.updateUserList(user,userId);
+            $state.go('client.home');
           }
         })
       }

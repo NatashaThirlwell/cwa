@@ -2,6 +2,63 @@ var Clients	= require('./../models/Clients')
 // var models 	= require('./../models');
 var router 	= require('express').Router();
 var mongoose = require('mongoose');
+var multer = require('multer');
+
+//multer configuration
+var storage = multer.diskStorage({
+	destination:function(req, file, callback){
+		callback(null,'./app/uploads');
+	},
+	filename: function(req, file, callback){
+		console.log(file)
+		var originalName = file.originalname;
+		var fileExtension = originalName.split('.').slice(-1);
+		originalName = originalName.split('.').slice(0,-1).join('.');
+		console.log('name:' + originalName)
+		callback(null,originalName + '-' + Date.now() + '.' + fileExtension);
+	}
+});
+
+var upload = multer({storage:storage}).any();
+// upload(req, res, function(err){
+// 		console.log(req.files)
+// 		if(err){
+// 			console.log(err)
+// 			res.send(err);
+// 			throw err;
+// 		}
+// 		console.log(req.files[0].path)
+// 		res.send(req.files[0].path)
+// 	})
+
+// var upload = multer({storage: storage}).any();
+
+// profile picture upload endpoint
+router.post('/upload/:userId', function(req, res) {
+	console.log('receive upload req')
+	upload(req, res, function(err) {
+		if (err) {
+			res.send(err);
+			console.log(err);
+			throw err;
+		} 
+			//need to get filename response from multer
+			console.log('file', req.files)
+			// console.log('filepath', req.file.path)
+			var filepath = "PLACEHOLDER";
+			res.send(filepath)
+			// var where = {"_id":req.params.userId};
+			// Clients
+			// 	.findOne(where)
+			// 	.then(function(client){
+			// 		client.updateAttributes({
+			// 			profile_pic: filepath
+			// 		})
+			// 		res.send('Picture has been added');
+			// 	})	
+		// }
+	});
+});
 
 //-----------------------------------------------
 // middleware to use for all requests
@@ -28,8 +85,8 @@ router.get('/',function(req,res){
 router.get('/:userId',function(req, res) {
 	console.log('Getting user with ID: '+req.params.userId);
 	var where = {_id:req.params.userId};
-	console.log(mongoose.Types.ObjectId.isValid(req.params.userID));
-	console.log(where)
+	// console.log(mongoose.Types.ObjectId.isValid(req.params.userID));
+	// console.log(where)
     Clients.findById(where)
     .then(function(user){
     	console.log('user',user)
@@ -39,7 +96,6 @@ router.get('/:userId',function(req, res) {
     	}
     	else{
     		console.log(user)
-			// console.log(user.email);
 			res.json({
 				user:user
 			});

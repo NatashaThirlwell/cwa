@@ -143,6 +143,10 @@
 				url:'/register/:seminarId',
 				templateUrl:'site/profile/partial-client-register.html'
 			})
+			.state('client.edit',{
+				url:'/edit',
+				templateUrl:'site/profile/partial-client-edit.html'
+			})
 
 		// ADMIN PROFILES
 			.state('admin',{
